@@ -1,64 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Alessandro Barbieri - Android Developer</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alessandro Barbieri - Android Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <meta name="description"
+        content="Portfolio of Alessandro Barbieri, Android Developer. Explore apps like RogUpdater, SushiMeter, and DriveTracker.">
 </head>
+
 <body>
-<header>
-    <h1>My android apps</h1>
-    <p>Here you can find my android apps and the closed tests you can join.</p>
-</header>
+    <canvas id="particle-canvas"></canvas>
 
-<main>
+    <div class="lang-switch">
+        <button onclick="setLanguage('en')" class="lang-btn active" id="btn-en">EN</button>
+        <span class="divider">/</span>
+        <button onclick="setLanguage('it')" class="lang-btn" id="btn-it">IT</button>
+    </div>
 
-<!-- Sezione App Pubbliche -->
-<section>
-    <h2>Public apps</h2>
-    <ul>
-        <li>
-            <a href="https://play.google.com/apps/testing/com.ialex5.rogupdater" target="_blank"><img src="img/RogUpdater.png" alt="RogUpdater" class="app-logo"></a>
-            <a href="https://play.google.com/apps/testing/com.ialex5.rogupdater" target="_blank">RogUpdater</a>
-        </li>
-            <a href="https://play.google.com/apps/testing/com.ialex5.sushiMeter" target="_blank"><img src="img/SushiMeter.png" alt="SushiMeter" class="app-logo"></a>
-            <a href="https://play.google.com/apps/testing/com.ialex5.sushiMeter" target="_blank">SushiMeter</a>
-        </li>
-    </ul>
-</section>
+    <header>
+        <h1 data-i18n="header.title">Alessandro Barbieri</h1>
+        <p class="typing-container"><span data-i18n="header.subtitle">Android Developer • Crafting useful and fun
+                experiences</span> <span id="typing-text"></span><span class="cursor">|</span></p>
+    </header>
 
-<!-- Sezione App in Test Chiuso -->
-<section>
-    <h2>Closed test apps</h2>
-    <p>To download these apps you need to join first my google tester group:</p>
-    <ul>
-        <li><a href="https://groups.google.com/g/iAlex5-apps-testers" target="_blank">Google tester group</a></li>
-    </ul>
-    <p>Available apps:</p>
-    <ul>
-        <li>
-            <a href="https://play.google.com/apps/testing/com.ialex5.driveTracker" target="_blank"><img src="img/DriveTracker.png" alt="DriveTracker" class="app-logo"></a>
-            <a href="https://play.google.com/apps/testing/com.ialex5.driveTracker" target="_blank">DriveTracker</a>
-        </li>
-    </ul>
-</section>
+    <div class="background-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
 
-<!-- Privacy Policy -->
-<section>
-    <h2>Privacy Policies</h2>
-    <p>Read my apps privacy policies:</p>
-    <ul>
-        <li><a href="privacyPolicy/RogUpdater.html" target="_blank">RogUpdater - Privacy Policy</a></li>
-        <li><a href="privacyPolicy/SushiMeter.html" target="_blank">SushiMeter - Privacy Policy</a></li>
-        <li><a href="privacyPolicy/DriveTracker.html" target="_blank">DriveTracker - Privacy Policy</a></li>
-    </ul>
-</section>
+    <main>
+        <!-- Skills Section -->
+        <section class="skills-section">
+            <div class="skill-badge">Scala</div>
+            <div class="skill-badge">Java</div>
+            <div class="skill-badge">Android SDK</div>
+            <div class="skill-badge">SQL</div>
+            <div class="skill-badge">HTML</div>
+            <div class="skill-badge">CSS</div>
+            <div class="skill-badge">Git</div>
+        </section>
 
-</main>
+        <!-- Public Apps Section -->
+        <section>
+            <h2 data-i18n="apps.public.title">Public Apps</h2>
+            <div class="app-grid">
+                <!-- RogUpdater -->
+                <article class="app-card">
+                    <a href="https://play.google.com/apps/testing/com.ialex5.rogupdater" target="_blank">
+                        <img src="img/RogUpdater.png" alt="RogUpdater App" class="app-logo">
+                    </a>
+                    <h3 class="app-name">RogUpdater</h3>
+                    <a href="https://play.google.com/apps/testing/com.ialex5.rogupdater" class="app-link"
+                        target="_blank" data-i18n="apps.rogupdater.desc">View on Play Store</a>
+                </article>
 
-<footer>
-    <p>&copy; 2025 Alessandro Barbieri. All rights reserved.</p>
-</footer>
+                <!-- SushiMeter -->
+                <article class="app-card">
+                    <a href="https://play.google.com/apps/testing/com.ialex5.sushiMeter" target="_blank">
+                        <img src="img/SushiMeter.png" alt="SushiMeter App" class="app-logo">
+                    </a>
+                    <h3 class="app-name">SushiMeter</h3>
+                    <a href="https://play.google.com/apps/testing/com.ialex5.sushiMeter" class="app-link"
+                        target="_blank" data-i18n="apps.sushimeter.desc">View on Play Store</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- Closed Test Apps Section -->
+        <section>
+            <h2 data-i18n="apps.closed.title">Closed Test Apps</h2>
+            <div class="tester-info">
+                <p data-i18n="apps.closed.info">Want to try the latest features? These apps are in closed testing.</p>
+                <p><span data-i18n="apps.closed.step1"><strong>Step 1:</strong> Join the tester group first:</span></p>
+                <a href="https://groups.google.com/g/iAlex5-apps-testers" class="google-group-link" target="_blank"
+                    data-i18n="apps.closed.join">Join
+                    Google Tester Group</a>
+            </div>
+
+            <div class="app-grid">
+                <!-- DriveTracker -->
+                <article class="app-card">
+                    <a href="https://play.google.com/apps/testing/com.ialex5.driveTracker" target="_blank">
+                        <img src="img/DriveTracker.png" alt="DriveTracker App" class="app-logo">
+                    </a>
+                    <h3 class="app-name">DriveTracker</h3>
+                    <a href="https://play.google.com/apps/testing/com.ialex5.driveTracker" class="app-link"
+                        target="_blank" data-i18n="apps.drivetracker.desc">Join Beta</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section>
+            <h2 data-i18n="contact.title">Contact Me</h2>
+            <div class="contact-container">
+                <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+                    <!-- Replace with your actual Access Key -->
+                    <input type="hidden" name="access_key" value="7a7228a8-616c-434c-8e0d-ad3639ddb07e">
+
+                    <!-- Honeypot Spam Protection -->
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name" required
+                            data-i18n-placeholder="contact.name.placeholder">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Your Email" required
+                            data-i18n-placeholder="contact.email.placeholder">
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Your Message" rows="5" required
+                            data-i18n-placeholder="contact.message.placeholder"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn" data-i18n="contact.submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Privacy Policies Section -->
+        <section>
+            <h2 data-i18n="policies.title">Privacy Policies</h2>
+            <ul class="policy-list">
+                <li><a href="privacyPolicy/RogUpdater.html" class="policy-link"
+                        data-i18n="policies.rogupdater">RogUpdater Privacy Policy</a></li>
+                <li><a href="privacyPolicy/SushiMeter.html" class="policy-link"
+                        data-i18n="policies.sushimeter">SushiMeter Privacy Policy</a></li>
+                <li><a href="privacyPolicy/DriveTracker.html" class="policy-link"
+                        data-i18n="policies.drivetracker">DriveTracker Privacy Policy</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <a href="https://www.paypal.com/donate/?hosted_button_id=MQKZWENENAE54" target="_blank" class="beer-btn">
+            <span data-i18n="beer.text">🍺 Buy me a beer</span>
+        </a>
+        <p data-i18n="footer.rights">&copy; 2025 Alessandro Barbieri. All rights reserved.</p>
+    </footer>
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>

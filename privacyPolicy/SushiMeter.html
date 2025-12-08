@@ -4,78 +4,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SushiMeter - Privacy Policy</title>
+    <title>Privacy Policy - SushiMeter</title>
     <link rel="stylesheet" href="../style.css">
 </head>
 
-<body>
+<body class="policy-page">
+
+    <div class="lang-switch">
+        <button onclick="setLanguage('en')" class="lang-btn active" id="btn-en">EN</button>
+        <span class="divider">/</span>
+        <button onclick="setLanguage('it')" class="lang-btn" id="btn-it">IT</button>
+    </div>
+
     <header>
-        <h1>SushiMeter - Privacy Policy</h1>
-        <p>Effective Date: November 1, 2025</p>
+        <h1 data-i18n="policies.sushimeter">SushiMeter Privacy Policy</h1>
     </header>
+    <div class="container">
 
-    <main>
-        <section>
-            <h1 id="-privacy-policy-sushi-meter">🍣 Privacy Policy – Sushi Meter</h1>
-            <p><strong>Effective Date:</strong> November 1, 2025 </p>
-            <p>Thank you for using <strong>Sushi Meter</strong>.<br>Your privacy is very important to us, and we are
-                committed to being transparent about how your information is handled.</p>
-            <p>In short:</p>
-            <blockquote>
-                <p><strong>Sushi Meter itself does not collect, store, or share any personal data.</strong><br>However,
-                    the app displays ads using <strong>Google AdMob</strong>, which may collect certain data to
-                    personalize or measure ads.</p>
-            </blockquote>
-            <hr>
-            <h2 id="1-information-we-collect">1. Information We Collect</h2>
-            <p>Sushi Meter does <strong>not</strong> directly collect or store any personal information.<br>All counting
-                and history data remain on your device and are never transmitted to any server.</p>
-            <p>However, because the app uses <strong>AdMob (Google Mobile Ads)</strong>, Google may automatically
-                collect limited information such as:</p>
-            <ul>
-                <li>Advertising ID (for ad personalization or frequency capping) </li>
-                <li>Approximate location (for regional ad targeting) </li>
-                <li>Device type, operating system, and app activity related to ad display </li>
-            </ul>
-            <p>This information is handled according to <strong>Google’s Privacy Policy</strong>:<br>🔗 <a
-                    href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></p>
-            <hr>
-            <h2 id="2-local-data-storage">2. Local Data Storage</h2>
-            <p>The only local data stored by Sushi Meter are your <strong>sushi-piece counts and usage history</strong>,
-                kept <strong>solely on your device</strong>.<br>These are <strong>never uploaded, transmitted, or
-                    shared</strong>.<br>If you uninstall the app or clear its data, this information will be permanently
-                deleted.</p>
-            <hr>
-            <h2 id="3-advertising-admob-">3. Advertising (AdMob)</h2>
-            <p>Sushi Meter uses <strong>Google AdMob</strong> to display in-app ads.<br>AdMob may use cookies, mobile
-                identifiers, or similar technologies to provide and improve ad performance.</p>
-            <p>Users can learn more and adjust their ad preferences here:<br>🔗 <a
-                    href="https://myadcenter.google.com">https://myadcenter.google.com</a></p>
-            <p>If you are in the European Economic Area (EEA) or the UK, you may see a consent prompt the first time you
-                open the app.<br>Your choice will determine whether ads are personalized.</p>
-            <hr>
-            <h2 id="4-internet-access-and-third-party-services">4. Internet Access and Third-Party Services</h2>
-            <p>The app connects to the internet <strong>only to load ads</strong>.<br>It does <strong>not</strong> use
-                any other external services, APIs, analytics, or data-collection SDKs.</p>
-            <hr>
-            <h2 id="5-children-s-privacy">5. Children’s Privacy</h2>
-            <p>Sushi Meter is not specifically directed at children under 13.<br>We do not knowingly collect data from
-                any users.<br>AdMob may serve non-personalized ads appropriate for a general audience.</p>
-            <hr>
-            <h2 id="6-changes-to-this-policy">6. Changes to This Policy</h2>
-            <p>If we make any changes to this Privacy Policy, the updated version will always be available at this same
-                link.<br>We recommend checking it periodically to stay informed.</p>
-            <hr>
-            <h2 id="7-contact">7. Contact</h2>
-            <p>If you have any questions about this Privacy Policy, please contact us at:</p>
-            <p>📧 <strong>ale.ialex5@yahoo.it</strong></p>
+        <!-- English Content -->
+        <div id="policy-en">
+            <h1>🍣 Privacy Policy – Sushi Meter</h1>
+            <p><strong>Effective Date: November 1, 2025</strong></p>
+            <p>Thank you for using Sushi Meter. Your privacy is very important to us, and we are committed to being
+                transparent about how your information is handled.</p>
+            <p><strong>In short:</strong><br>
+                Sushi Meter itself does not collect, store, or share any personal data. However, the app displays ads
+                using
+                Google AdMob, which may collect certain data to personalize or measure ads.</p>
 
-        </section>
-    </main>
+            <section>
+                <h2>1. Information We Collect</h2>
+                <p>Sushi Meter does not directly collect or store any personal information. All counting and history
+                    data
+                    remain on your device and are never transmitted to any server.</p>
+                <p>However, because the app uses AdMob (Google Mobile Ads), Google may automatically collect limited
+                    information such as:</p>
+                <ul>
+                    <li>Advertising ID (for ad personalization or frequency capping)</li>
+                    <li>Approximate location (for regional ad targeting)</li>
+                    <li>Device type, operating system, and app activity related to ad display</li>
+                </ul>
+                <p>This information is handled according to Google’s Privacy Policy: <a
+                        href="https://policies.google.com/privacy"
+                        target="_blank">https://policies.google.com/privacy</a>
+                </p>
+            </section>
 
+            <section>
+                <h2>2. Local Data Storage</h2>
+                <p>The only local data stored by Sushi Meter are your sushi-piece counts and usage history, kept solely
+                    on
+                    your device. These are never uploaded, transmitted, or shared. If you uninstall the app or clear its
+                    data, this information will be permanently deleted.</p>
+            </section>
+
+            <section>
+                <h2>3. Advertising (AdMob)</h2>
+                <p>Sushi Meter uses Google AdMob to display in-app ads. AdMob may use cookies, mobile identifiers, or
+                    similar technologies to provide and improve ad performance.</p>
+                <p>Users can learn more and adjust their ad preferences here: <a href="https://myadcenter.google.com"
+                        target="_blank">https://myadcenter.google.com</a></p>
+                <p>If you are in the European Economic Area (EEA) or the UK, you may see a consent prompt the first time
+                    you
+                    open the app. Your choice will determine whether ads are personalized.</p>
+            </section>
+
+            <section>
+                <h2>4. Internet Access and Third-Party Services</h2>
+                <p>The app connects to the internet only to load ads. It does not use any other external services, APIs,
+                    analytics, or data-collection SDKs.</p>
+            </section>
+
+            <section>
+                <h2>5. Children’s Privacy</h2>
+                <p>Sushi Meter is not specifically directed at children under 13. We do not knowingly collect data from
+                    any
+                    users. AdMob may serve non-personalized ads appropriate for a general audience.</p>
+            </section>
+
+            <section>
+                <h2>6. Changes to This Policy</h2>
+                <p>If we make any changes to this Privacy Policy, the updated version will always be available at this
+                    same
+                    link. We recommend checking it periodically to stay informed.</p>
+            </section>
+
+            <section>
+                <h2>7. Contact</h2>
+                <p>If you have any questions about this Privacy Policy, please contact us at:</p>
+                <p>📧 <a href="mailto:ale.ialex5@yahoo.it">ale.ialex5@yahoo.it</a></p>
+            </section>
+
+            <p>© 2025 Alessandro Barbieri</p>
+        </div>
+
+        <!-- Italian Content -->
+        <div id="policy-it" style="display: none;">
+            <h1>🍣 Informativa sulla Privacy – Sushi Meter</h1>
+            <p><strong>Data di entrata in vigore: 1 Novembre 2025</strong></p>
+            <p>Grazie per aver scelto Sushi Meter. La tua privacy è molto importante per noi e ci impegniamo ad essere
+                trasparenti su come vengono gestite le tue informazioni.</p>
+            <p><strong>In breve:</strong><br>
+                Sushi Meter non raccoglie, archivia o condivide alcun dato personale. Tuttavia, l'app mostra annunci
+                pubblicitari tramite Google AdMob, che potrebbe raccogliere alcuni dati per personalizzare o misurare
+                gli annunci.</p>
+
+            <section>
+                <h2>1. Informazioni che raccogliamo</h2>
+                <p>Sushi Meter non raccoglie né memorizza direttamente alcuna informazione personale. Tutti i dati di
+                    conteggio e cronologia rimangono sul dispositivo e non vengono mai trasmessi a nessun server.</p>
+                <p>Tuttavia, poiché l'app utilizza AdMob (Google Mobile Ads), Google potrebbe raccogliere
+                    automaticamente informazioni limitate come:</p>
+                <ul>
+                    <li>ID pubblicitario (per la personalizzazione degli annunci o il limite di frequenza)</li>
+                    <li>Posizione approssimativa (per il targeting regionale degli annunci)</li>
+                    <li>Tipo di dispositivo, sistema operativo e attività dell'app relativa alla visualizzazione degli
+                        annunci</li>
+                </ul>
+                <p>Queste informazioni sono gestite in base alla Privacy Policy di Google: <a
+                        href="https://policies.google.com/privacy"
+                        target="_blank">https://policies.google.com/privacy</a></p>
+            </section>
+
+            <section>
+                <h2>2. Archiviazione dei Dati Locali</h2>
+                <p>Gli unici dati locali memorizzati da Sushi Meter sono i conteggi dei pezzi di sushi e la cronologia
+                    di utilizzo, conservati esclusivamente sul dispositivo. Questi non vengono mai caricati, trasmessi o
+                    condivisi. Se disinstalli l'app o ne cancelli i dati, queste informazioni verranno eliminate
+                    definitivamente.</p>
+            </section>
+
+            <section>
+                <h2>3. Pubblicità (AdMob)</h2>
+                <p>Sushi Meter utilizza Google AdMob per visualizzare annunci in-app. AdMob può utilizzare cookie,
+                    identificatori mobili o tecnologie simili per fornire e migliorare le prestazioni degli annunci.</p>
+                <p>Gli utenti possono saperne di più e regolare le proprie preferenze sugli annunci qui: <a
+                        href="https://myadcenter.google.com" target="_blank">https://myadcenter.google.com</a></p>
+                <p>Se ti trovi nello Spazio Economico Europeo (SEE) o nel Regno Unito, potresti visualizzare un prompt
+                    di consenso la prima volta che apri l'app. La tua scelta determinerà se gli annunci saranno
+                    personalizzati o meno.</p>
+            </section>
+
+            <section>
+                <h2>4. Accesso a Internet e Servizi di Terze Parti</h2>
+                <p>L'app si connette a Internet solo per caricare gli annunci. Non utilizza altri servizi esterni, API,
+                    analisi o SDK per la raccolta dati.</p>
+            </section>
+
+            <section>
+                <h2>5. Privacy dei Bambini</h2>
+                <p>Sushi Meter non è specificamente rivolto a bambini di età inferiore ai 13 anni. Non raccogliamo
+                    consapevolmente dati da nessun utente. AdMob può pubblicare annunci non personalizzati appropriati
+                    per un pubblico generico.</p>
+            </section>
+
+            <section>
+                <h2>6. Modifiche a questa Informativa</h2>
+                <p>Se apporteremo modifiche a questa Informativa sulla Privacy, la versione aggiornata sarà sempre
+                    disponibile a questo stesso link. Ti consigliamo di controllarla periodicamente per rimanere
+                    informato.</p>
+            </section>
+
+            <section>
+                <h2>7. Contatti</h2>
+                <p>Se hai domande su questa Informativa sulla Privacy, contattaci a:</p>
+                <p>📧 <a href="mailto:ale.ialex5@yahoo.it">ale.ialex5@yahoo.it</a></p>
+            </section>
+
+            <p>© 2025 Alessandro Barbieri</p>
+        </div>
+
+        <a href="../index.html" class="back-link" data-i18n="policyTranslations.back">← Back to Home</a>
+    </div>
     <footer>
-        <p>&copy; 2025 Alessandro Barbieri</p>
+        <p data-i18n="footer.rights">&copy; 2025 Alessandro Barbieri. All rights reserved.</p>
     </footer>
+    <script src="../translations.js"></script>
+    <script src="../script.js"></script>
 </body>
 
 </html>

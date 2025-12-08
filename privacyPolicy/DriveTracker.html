@@ -4,74 +4,195 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DriveTracker - Privacy Policy</title>
+    <title>Privacy Policy - DriveTracker</title>
     <link rel="stylesheet" href="../style.css">
 </head>
 
-<body>
+<body class="policy-page">
+
+    <div class="lang-switch">
+        <button onclick="setLanguage('en')" class="lang-btn active" id="btn-en">EN</button>
+        <span class="divider">/</span>
+        <button onclick="setLanguage('it')" class="lang-btn" id="btn-it">IT</button>
+    </div>
+
     <header>
-        <h1>DriveTracker - Privacy Policy</h1>
-        <p>Effective Date: November 30, 2025</p>
+        <h1 data-i18n="policies.drivetracker">DriveTracker Privacy Policy</h1>
     </header>
+    <div class="container">
 
-    <main>
-        <section>
-            <hr>
-            <h1 id="-privacy-policy-drivetracker">🔒 Privacy Policy – DriveTracker</h1>
-            <p><strong>Effective Date:</strong> November 30, 2025</p>
-            <p>Thank you for using <strong>DriveTracker</strong>.<br>Your privacy is very important to us, and we are
-                committed to being transparent about how your information is handled.</p>
-            <p>In short:</p>
-            <blockquote>
-                <p><strong>DriveTracker stores location data locally on your device.</strong><br>
-                    The app collects background location data to record your trips even when the screen is off. It also displays ads using <strong>Google AdMob</strong>.</p>
-            </blockquote>
-            <hr>
-            <h2 id="1-location-data">1. Location Data (Background & Foreground)</h2>
-            <p><strong>DriveTracker collects location data</strong> to enable the recording of your car trips, calculate speed, distance, and duration, and to draw your route on the map.</p>
-            <p>This data collection occurs <strong>even when the app is closed or not in use</strong> (Background Location), provided you have actively started a recording session by pressing the "Start Tracking" button.</p>
-            <p>Location data is stored <strong>locally</strong> on your device within the application's database. We do not transmit your location history to any external server owned by us.</p>
-            <hr>
-            <h2 id="2-advertising-admob-">2. Advertising (AdMob)</h2>
-            <p>DriveTracker uses <strong>Google AdMob</strong> to display in-app advertisements.<br>AdMob may automatically gather limited, non-personal information such as:</p>
-            <ul>
-                <li>Advertising ID (for ad personalization and frequency capping) </li>
-                <li>Approximate location (for regional ad targeting) </li>
-                <li>Device type, operating system, and app interaction related to ad display </li>
-            </ul>
-            <p>This information is handled in accordance with <strong>Google’s Privacy Policy</strong>:<br>🔗 <a
-                    href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></p>
-            <p>You can also manage your ad preferences or opt out of personalized ads at:<br>🔗 <a
-                    href="https://myadcenter.google.com">https://myadcenter.google.com</a></p>
-            <hr>
-            <h2 id="3-third-party-services">3. Third-Party Services</h2>
-            <p>The app requires an internet connection to load map data and advertisements.<br>We use the following third-party services:</p>
-            <ul>
-                <li><strong>Google Maps SDK:</strong> To display maps and routes.</li>
-                <li><strong>Google Play Services:</strong> For location accuracy and core services.</li>
-                <li><strong>AdMob:</strong> For advertising.</li>
-            </ul>
-            <hr>
-            <h2 id="4-data-storage">4. Storage of Data</h2>
-            <p>DriveTracker operates as an <strong>offline-first</strong> application. All trip data (coordinates, timestamps, statistics) are stored in a local database on your device.</p>
-            <p>If you uninstall the application or clear its data, this information will be permanently lost unless you have performed a manual backup.</p>
-            <hr>
-            <h2 id="5-children-s-privacy">5. Children’s Privacy</h2>
-            <p>DriveTracker is not designed for children under the age of 13.<br>We do not knowingly collect personally identifiable information from children under 13.</p>
-            <hr>
-            <h2 id="6-changes-to-this-policy">6. Changes to This Policy</h2>
-            <p>If we make any changes to this Privacy Policy, the updated version will always be available at this same link.<br>We recommend checking it periodically to stay informed about how your information is handled.</p>
-            <hr>
-            <h2 id="7-contact">7. Contact</h2>
-            <p>If you have any questions or concerns about this Privacy Policy, please contact us at:</p>
-            <p>📧 <strong>ale.ialex5@yahoo.it</strong></p>
+        <!-- English Content -->
+        <div id="policy-en">
+            <h1>🔒 Privacy Policy – DriveTracker</h1>
+            <p><strong>Effective Date: November 30, 2025</strong></p>
+            <p>Thank you for using DriveTracker. Your privacy is very important to us, and we are committed to being
+                transparent about how your information is handled.</p>
+            <p><strong>In short:</strong><br>
+                DriveTracker stores location data locally on your device. The app collects background location data to
+                record your trips even when the screen is off. It also displays ads using Google AdMob.</p>
 
-        </section>
-    </main>
+            <section>
+                <h2>1. Location Data (Background & Foreground)</h2>
+                <p>DriveTracker collects location data to enable the recording of your car trips, calculate speed,
+                    distance,
+                    and duration, and to draw your route on the map.</p>
+                <p>This data collection occurs even when the app is closed or not in use (Background Location), provided
+                    you
+                    have actively started a recording session by pressing the "Start Tracking" button.</p>
+                <p>Location data is stored locally on your device within the application's database. We do not transmit
+                    your
+                    location history to any external server owned by us.</p>
+            </section>
 
+            <section>
+                <h2>2. Advertising (AdMob)</h2>
+                <p>DriveTracker uses Google AdMob to display in-app advertisements. AdMob may automatically gather
+                    limited,
+                    non-personal information such as:</p>
+                <ul>
+                    <li>Advertising ID (for ad personalization and frequency capping)</li>
+                    <li>Approximate location (for regional ad targeting)</li>
+                    <li>Device type, operating system, and app interaction related to ad display</li>
+                </ul>
+                <p>This information is handled in accordance with Google’s Privacy Policy: <a
+                        href="https://policies.google.com/privacy"
+                        target="_blank">https://policies.google.com/privacy</a>
+                </p>
+                <p>You can also manage your ad preferences or opt out of personalized ads at: <a
+                        href="https://myadcenter.google.com" target="_blank">https://myadcenter.google.com</a></p>
+            </section>
+
+            <section>
+                <h2>3. Third-Party Services</h2>
+                <p>The app requires an internet connection to load map data and advertisements. We use the following
+                    third-party services:</p>
+                <ul>
+                    <li>Google Maps SDK: To display maps and routes.</li>
+                    <li>Google Play Services: For location accuracy and core services.</li>
+                    <li>AdMob: For advertising.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>4. Storage of Data</h2>
+                <p>DriveTracker operates as an offline-first application. All trip data (coordinates, timestamps,
+                    statistics) are stored in a local database on your device.</p>
+                <p>If you uninstall the application or clear its data, this information will be permanently lost unless
+                    you
+                    have performed a manual backup.</p>
+            </section>
+
+            <section>
+                <h2>5. Children’s Privacy</h2>
+                <p>DriveTracker is not designed for children under the age of 13. We do not knowingly collect personally
+                    identifiable information from children under 13.</p>
+            </section>
+
+            <section>
+                <h2>6. Changes to This Policy</h2>
+                <p>If we make any changes to this Privacy Policy, the updated version will always be available at this
+                    same
+                    link. We recommend checking it periodically to stay informed about how your information is handled.
+                </p>
+            </section>
+
+            <section>
+                <h2>7. Contact</h2>
+                <p>If you have any questions or concerns about this Privacy Policy, please contact us at:</p>
+                <p>📧 <a href="mailto:ale.ialex5@yahoo.it">ale.ialex5@yahoo.it</a></p>
+            </section>
+
+            <p>© 2025 Alessandro Barbieri</p>
+        </div>
+
+        <!-- Italian Content -->
+        <div id="policy-it" style="display: none;">
+            <h1>🔒 Informativa sulla Privacy – DriveTracker</h1>
+            <p><strong>Data di entrata in vigore: 30 Novembre 2025</strong></p>
+            <p>Grazie per aver scelto DriveTracker. La tua privacy è molto importante per noi e ci impegniamo ad essere
+                trasparenti su come vengono gestite le tue informazioni.</p>
+            <p><strong>In breve:</strong><br>
+                DriveTracker memorizza i dati sulla posizione localmente sul tuo dispositivo. L'app raccoglie i dati
+                sulla posizione in background per registrare i tuoi viaggi anche quando lo schermo è spento. Visualizza
+                anche annunci pubblicitari utilizzando Google AdMob.</p>
+
+            <section>
+                <h2>1. Dati sulla Posizione (Background e Foreground)</h2>
+                <p>DriveTracker raccoglie dati sulla posizione per consentire la registrazione dei tuoi viaggi in auto,
+                    calcolare velocità, distanza e durata, e per disegnare il tuo percorso sulla mappa.</p>
+                <p>Questa raccolta dati avviene anche quando l'app è chiusa o non in uso (Posizione in Background), a
+                    condizione che tu abbia avviato attivamente una sessione di registrazione premendo il pulsante
+                    "Inizia Tracciamento".</p>
+                <p>I dati sulla posizione sono memorizzati localmente sul tuo dispositivo all'interno del database
+                    dell'applicazione. Non trasmettiamo la tua cronologia delle posizioni a nessun server esterno di
+                    nostra proprietà.</p>
+            </section>
+
+            <section>
+                <h2>2. Pubblicità (AdMob)</h2>
+                <p>DriveTracker utilizza Google AdMob per visualizzare annunci in-app. AdMob potrebbe raccogliere
+                    automaticamente informazioni limitate e non personali come:</p>
+                <ul>
+                    <li>ID pubblicitario (per la personalizzazione degli annunci e il limite di frequenza)</li>
+                    <li>Posizione approssimativa (per il targeting regionale degli annunci)</li>
+                    <li>Tipo di dispositivo, sistema operativo e interazione con l'app relativa alla visualizzazione
+                        degli annunci</li>
+                </ul>
+                <p>Queste informazioni sono gestite in conformità con la Privacy Policy di Google: <a
+                        href="https://policies.google.com/privacy"
+                        target="_blank">https://policies.google.com/privacy</a></p>
+                <p>Puoi anche gestire le tue preferenze sugli annunci o disattivare gli annunci personalizzati su: <a
+                        href="https://myadcenter.google.com" target="_blank">https://myadcenter.google.com</a></p>
+            </section>
+
+            <section>
+                <h2>3. Servizi di Terze Parti</h2>
+                <p>L'app richiede una connessione Internet per caricare i dati delle mappe e gli annunci. Utilizziamo i
+                    seguenti servizi di terze parti:</p>
+                <ul>
+                    <li>Google Maps SDK: Per visualizzare mappe e percorsi.</li>
+                    <li>Google Play Services: Per la precisione della posizione e i servizi principali.</li>
+                    <li>AdMob: Per la pubblicità.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>4. Archiviazione dei Dati</h2>
+                <p>DriveTracker funziona come un'applicazione offline-first. Tutti i dati di viaggio (coordinate,
+                    timestamp, statistiche) sono memorizzati in un database locale sul tuo dispositivo.</p>
+                <p>Se disinstalli l'applicazione o ne cancelli i dati, queste informazioni andranno perse
+                    definitivamente a meno che tu non abbia eseguito un backup manuale.</p>
+            </section>
+
+            <section>
+                <h2>5. Privacy dei Bambini</h2>
+                <p>DriveTracker non è progettato per bambini di età inferiore ai 13 anni. Non raccogliamo
+                    consapevolmente informazioni di identificazione personale da bambini di età inferiore a 13 anni.</p>
+            </section>
+
+            <section>
+                <h2>6. Modifiche a questa Informativa</h2>
+                <p>Se apporteremo modifiche a questa Informativa sulla Privacy, la versione aggiornata sarà sempre
+                    disponibile a questo stesso link. Ti consigliamo di controllarla periodicamente per rimanere
+                    informato su come vengono gestite le tue informazioni.</p>
+            </section>
+
+            <section>
+                <h2>7. Contatti</h2>
+                <p>Se hai domande o dubbi su questa Informativa sulla Privacy, contattaci a:</p>
+                <p>📧 <a href="mailto:ale.ialex5@yahoo.it">ale.ialex5@yahoo.it</a></p>
+            </section>
+
+            <p>© 2025 Alessandro Barbieri</p>
+        </div>
+
+        <a href="../index.html" class="back-link" data-i18n="policyTranslations.back">← Back to Home</a>
+    </div>
     <footer>
-        <p>&copy; 2025 Alessandro Barbieri</p>
+        <p data-i18n="footer.rights">&copy; 2025 Alessandro Barbieri. All rights reserved.</p>
     </footer>
+    <script src="../translations.js"></script>
+    <script src="../script.js"></script>
 </body>
 
 </html>

@@ -4,83 +4,186 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RogUpdater - Privacy Policy</title>
+    <title>Privacy Policy - RogUpdater</title>
     <link rel="stylesheet" href="../style.css">
 </head>
 
-<body>
+<body class="policy-page">
+
+    <div class="lang-switch">
+        <button onclick="setLanguage('en')" class="lang-btn active" id="btn-en">EN</button>
+        <span class="divider">/</span>
+        <button onclick="setLanguage('it')" class="lang-btn" id="btn-it">IT</button>
+    </div>
+
     <header>
-        <h1>RogUpdater - Privacy Policy</h1>
-        <p>Effective Date: May 5, 2025</p>
+        <h1 data-i18n="policies.rogupdater">RogUpdater Privacy Policy</h1>
     </header>
+    <div class="container">
 
-    <main>
-        <section>
-            <hr>
-            <h1 id="-privacy-policy-rogupdater">🔒 Privacy Policy – RogUpdater</h1>
-            <p><strong>Effective Date:</strong> May 5, 2025 </p>
-            <p>Thank you for using <strong>RogUpdater</strong>.<br>Your privacy is very important to us, and we are
-                committed to being transparent about how your information is handled.</p>
-            <p>In short:</p>
-            <blockquote>
-                <p><strong>RogUpdater does not collect, store, or share any personal data.</strong><br>However, the app
-                    displays ads using <strong>Google AdMob</strong>, which may collect certain information for ad
-                    personalization and performance measurement.</p>
-            </blockquote>
-            <hr>
-            <h2 id="1-information-we-do-not-collect">1. Information We Do Not Collect</h2>
-            <p>RogUpdater does <strong>not</strong> collect or process any personal information
-                directly.<br>Specifically, the app does <strong>not</strong> access or store:</p>
-            <ul>
-                <li>Personal identifiers (name, email, phone, etc.) </li>
-                <li>Location data </li>
-                <li>Device identifiers (IMEI, serial number, etc.) </li>
-                <li>App usage analytics or crash reports </li>
-                <li>Any online or cloud-based data not related to advertising</li>
-            </ul>
-            <p>All core functionality (checking and downloading firmware updates) is handled <strong>entirely within the
-                    app</strong> and depends only on official firmware sources.</p>
-            <hr>
-            <h2 id="2-advertising-admob-">2. Advertising (AdMob)</h2>
-            <p>RogUpdater uses <strong>Google AdMob</strong> to display in-app advertisements.<br>While RogUpdater
-                itself does not collect data, AdMob may automatically gather limited, non-personal information such as:
-            </p>
-            <ul>
-                <li>Advertising ID (for ad personalization and frequency capping) </li>
-                <li>Approximate location (for regional ad targeting) </li>
-                <li>Device type, operating system, and app interaction related to ad display </li>
-            </ul>
-            <p>This information is handled in accordance with <strong>Google’s Privacy Policy</strong>:<br>🔗 <a
-                    href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></p>
-            <p>You can also manage your ad preferences or opt out of personalized ads at:<br>🔗 <a
-                    href="https://myadcenter.google.com">https://myadcenter.google.com</a></p>
-            <p>If you are in the European Economic Area (EEA) or the UK, you may be shown a consent prompt when you
-                first open the app.<br>Your choice will determine whether ads are personalized or non-personalized.</p>
-            <hr>
-            <h2 id="3-internet-access-and-third-party-services">3. Internet Access and Third-Party Services</h2>
-            <p>RogUpdater requires an internet connection to check for available firmware updates and to load
-                advertisements.<br>The app does <strong>not</strong> use any other third-party SDKs, analytics, or data
-                collection tools.</p>
-            <hr>
-            <h2 id="4-children-s-privacy">4. Children’s Privacy</h2>
-            <p>RogUpdater is not designed for children under the age of 13.<br>We do not knowingly collect data from any
-                users, and ads are served according to AdMob’s content rating policies.</p>
-            <hr>
-            <h2 id="5-changes-to-this-policy">5. Changes to This Policy</h2>
-            <p>If we make any changes to this Privacy Policy, the updated version will always be available at this same
-                link.<br>We recommend checking it periodically to stay informed about how your information is handled.
-            </p>
-            <hr>
-            <h2 id="6-contact">6. Contact</h2>
-            <p>If you have any questions or concerns about this Privacy Policy, please contact us at:</p>
-            <p>📧 <strong>ale.ialex5@yahoo.it</strong></p>
+        <!-- English Content -->
+        <div id="policy-en">
+            <h1>🔒 Privacy Policy – RogUpdater</h1>
+            <p><strong>Effective Date: May 5, 2025</strong></p>
+            <p>Thank you for using RogUpdater. Your privacy is very important to us, and we are committed to being
+                transparent about how your information is handled.</p>
+            <p><strong>In short:</strong><br>
+                RogUpdater does not collect, store, or share any personal data. However, the app displays ads using
+                Google
+                AdMob, which may collect certain information for ad personalization and performance measurement.</p>
 
-        </section>
-    </main>
+            <section>
+                <h2>1. Information We Do Not Collect</h2>
+                <p>RogUpdater does not collect or process any personal information directly. Specifically, the app does
+                    not
+                    access or store:</p>
+                <ul>
+                    <li>Personal identifiers (name, email, phone, etc.)</li>
+                    <li>Location data</li>
+                    <li>Device identifiers (IMEI, serial number, etc.)</li>
+                    <li>App usage analytics or crash reports</li>
+                    <li>Any online or cloud-based data not related to advertising</li>
+                </ul>
+                <p>All core functionality (checking and downloading firmware updates) is handled entirely within the app
+                    and
+                    depends only on official firmware sources.</p>
+            </section>
 
+            <section>
+                <h2>2. Advertising (AdMob)</h2>
+                <p>RogUpdater uses Google AdMob to display in-app advertisements. While RogUpdater itself does not
+                    collect
+                    data, AdMob may automatically gather limited, non-personal information such as:</p>
+                <ul>
+                    <li>Advertising ID (for ad personalization and frequency capping)</li>
+                    <li>Approximate location (for regional ad targeting)</li>
+                    <li>Device type, operating system, and app interaction related to ad display</li>
+                </ul>
+                <p>This information is handled in accordance with Google’s Privacy Policy: <a
+                        href="https://policies.google.com/privacy"
+                        target="_blank">https://policies.google.com/privacy</a>
+                </p>
+                <p>You can also manage your ad preferences or opt out of personalized ads at: <a
+                        href="https://myadcenter.google.com" target="_blank">https://myadcenter.google.com</a></p>
+                <p>If you are in the European Economic Area (EEA) or the UK, you may be shown a consent prompt when you
+                    first open the app. Your choice will determine whether ads are personalized or non-personalized.</p>
+            </section>
+
+            <section>
+                <h2>3. Internet Access and Third-Party Services</h2>
+                <p>RogUpdater requires an internet connection to check for available firmware updates and to load
+                    advertisements. The app does not use any other third-party SDKs, analytics, or data collection
+                    tools.
+                </p>
+            </section>
+
+            <section>
+                <h2>4. Children’s Privacy</h2>
+                <p>RogUpdater is not designed for children under the age of 13. We do not knowingly collect data from
+                    any
+                    users, and ads are served according to AdMob’s content rating policies.</p>
+            </section>
+
+            <section>
+                <h2>5. Changes to This Policy</h2>
+                <p>If we make any changes to this Privacy Policy, the updated version will always be available at this
+                    same
+                    link. We recommend checking it periodically to stay informed about how your information is handled.
+                </p>
+            </section>
+
+            <section>
+                <h2>6. Contact</h2>
+                <p>If you have any questions or concerns about this Privacy Policy, please contact us at:</p>
+                <p>📧 <a href="mailto:ale.ialex5@yahoo.it">ale.ialex5@yahoo.it</a></p>
+            </section>
+
+            <p>© 2025 Alessandro Barbieri</p>
+        </div>
+
+        <!-- Italian Content -->
+        <div id="policy-it" style="display: none;">
+            <h1>🔒 Informativa sulla Privacy – RogUpdater</h1>
+            <p><strong>Data di entrata in vigore: 5 Maggio 2025</strong></p>
+            <p>Grazie per aver scelto RogUpdater. La tua privacy è molto importante per noi e ci impegniamo ad essere
+                trasparenti su come vengono gestite le tue informazioni.</p>
+            <p><strong>In breve:</strong><br>
+                RogUpdater non raccoglie, archivia o condivide alcun dato personale. Tuttavia, l'app mostra annunci
+                pubblicitari tramite Google AdMob, che potrebbe raccogliere alcune informazioni per la personalizzazione
+                degli annunci e la misurazione delle prestazioni.</p>
+
+            <section>
+                <h2>1. Informazioni che NON raccogliamo</h2>
+                <p>RogUpdater non raccoglie né elabora direttamente alcuna informazione personale. Nello specifico,
+                    l'app non accede né memorizza:</p>
+                <ul>
+                    <li>Identificatori personali (nome, email, telefono, ecc.)</li>
+                    <li>Dati sulla posizione</li>
+                    <li>Identificatori del dispositivo (IMEI, numero di serie, ecc.)</li>
+                    <li>Analisi sull'utilizzo dell'app o rapporti sugli arresti anomali</li>
+                    <li>Qualsiasi dato online o cloud non correlato alla pubblicità</li>
+                </ul>
+                <p>Tutte le funzionalità principali (controllo e download degli aggiornamenti firmware) sono gestite
+                    interamente all'interno dell'app e dipendono solo dalle fonti ufficiali del firmware.</p>
+            </section>
+
+            <section>
+                <h2>2. Pubblicità (AdMob)</h2>
+                <p>RogUpdater utilizza Google AdMob per visualizzare annunci in-app. Sebbene RogUpdater non raccolga
+                    dati, AdMob potrebbe raccogliere automaticamente informazioni limitate e non personali come:</p>
+                <ul>
+                    <li>ID pubblicitario (per la personalizzazione degli annunci e il limite di frequenza)</li>
+                    <li>Posizione approssimativa (per il targeting regionale degli annunci)</li>
+                    <li>Tipo di dispositivo, sistema operativo e interazione con l'app relativa alla visualizzazione
+                        degli annunci</li>
+                </ul>
+                <p>Queste informazioni sono gestite in conformità con la Privacy Policy di Google: <a
+                        href="https://policies.google.com/privacy"
+                        target="_blank">https://policies.google.com/privacy</a></p>
+                <p>Puoi anche gestire le tue preferenze sugli annunci o disattivare gli annunci personalizzati su: <a
+                        href="https://myadcenter.google.com" target="_blank">https://myadcenter.google.com</a></p>
+                <p>Se ti trovi nello Spazio Economico Europeo (SEE) o nel Regno Unito, potrebbe esserti mostrato un
+                    prompt di consenso alla prima apertura dell'app. La tua scelta determinerà se gli annunci saranno
+                    personalizzati o meno.</p>
+            </section>
+
+            <section>
+                <h2>3. Accesso a Internet e Servizi di Terze Parti</h2>
+                <p>RogUpdater richiede una connessione Internet per verificare la disponibilità di aggiornamenti
+                    firmware e per caricare annunci pubblicitari. L'app non utilizza altri SDK di terze parti, analisi o
+                    strumenti di raccolta dati.</p>
+            </section>
+
+            <section>
+                <h2>4. Privacy dei Bambini</h2>
+                <p>RogUpdater non è progettato per bambini di età inferiore ai 13 anni. Non raccogliamo consapevolmente
+                    dati da nessun utente e gli annunci vengono pubblicati in base alle norme sulla classificazione dei
+                    contenuti di AdMob.</p>
+            </section>
+
+            <section>
+                <h2>5. Modifiche a questa Informativa</h2>
+                <p>Se apporteremo modifiche a questa Informativa sulla Privacy, la versione aggiornata sarà sempre
+                    disponibile a questo stesso link. Ti consigliamo di controllarla periodicamente per rimanere
+                    informato su come vengono gestite le tue informazioni.</p>
+            </section>
+
+            <section>
+                <h2>6. Contatti</h2>
+                <p>Se hai domande o dubbi su questa Informativa sulla Privacy, contattaci a:</p>
+                <p>📧 <a href="mailto:ale.ialex5@yahoo.it">ale.ialex5@yahoo.it</a></p>
+            </section>
+
+            <p>© 2025 Alessandro Barbieri</p>
+        </div>
+
+        <a href="../index.html" class="back-link" data-i18n="policyTranslations.back">← Back to Home</a>
+    </div>
     <footer>
-        <p>&copy; 2025 Alessandro Barbieri</p>
+        <p data-i18n="footer.rights">&copy; 2025 Alessandro Barbieri. All rights reserved.</p>
     </footer>
+    <script src="../translations.js"></script>
+    <script src="../script.js"></script>
 </body>
 
 </html>
