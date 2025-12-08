@@ -216,14 +216,12 @@ async function loadApps() {
             article.className = 'app-card';
 
             // Determine link based on status
-            let linkUrl = '';
+            let linkUrl = `https://play.google.com/store/apps/details?id=${app.id}`;
             let linkTextKey = '';
 
             if (app.status === 'public') {
-                linkUrl = `https://play.google.com/store/apps/details?id=${app.id}`;
                 linkTextKey = 'apps.public.desc';
             } else if (app.status === 'closed_testing') {
-                linkUrl = `https://play.google.com/apps/testing/${app.id}`;
                 linkTextKey = 'apps.test.desc';
             }
 
