@@ -211,6 +211,8 @@ async function loadApps() {
         const publicContainer = document.getElementById('public-apps-container');
         const closedContainer = document.getElementById('closed-apps-container');
 
+        let closedAppsCount = 0;
+
         apps.forEach(app => {
             const article = document.createElement('article');
             article.className = 'app-card';
@@ -223,6 +225,7 @@ async function loadApps() {
                 linkTextKey = 'apps.public.desc';
             } else if (app.status === 'closed_testing') {
                 linkTextKey = 'apps.test.desc';
+                closedAppsCount++;
             }
 
             article.innerHTML = `
@@ -239,6 +242,25 @@ async function loadApps() {
                 closedContainer.appendChild(article);
             }
         });
+
+        // Handle empty closed apps state
+        const testerInfo = document.getElementById('tester-info');
+        if (closedAppsCount === 0 && closedContainer) {
+            if (testerInfo) {
+                testerInfo.style.display = 'none';
+            }
+            const emptyMessage = document.createElement('p');
+            emptyMessage.setAttribute('data-i18n', 'apps.closed.empty');
+            // Add some styling inline or class if needed (simplified here)
+            emptyMessage.style.textAlign = 'center';
+            emptyMessage.style.width = '100%';
+            emptyMessage.style.color = 'var(--text-secondary)';
+            closedContainer.appendChild(emptyMessage);
+        } else {
+            if (testerInfo) {
+                testerInfo.style.display = 'block'; // Ensure it's visible if apps exist
+            }
+        }
 
         // Re-initialize 3D tilt for new elements
         init3DTilt();
