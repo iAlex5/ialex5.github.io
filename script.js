@@ -198,7 +198,61 @@ document.addEventListener("DOMContentLoaded", () => {
     if (form) {
         form.addEventListener('submit', validateForm);
     }
+
+    // 6. Load Apps
+    loadApps();
 });
+
+async function loadApps() {
+    try {
+        const response = await fetch('apps.json');
+        const apps = await response.json();
+
+        const publicContainer = document.getElementById('public-apps-container');
+        const closedContainer = document.getElementById('closed-apps-container');
+
+        apps.forEach(app => {
+            const article = document.createElement('article');
+            article.className = 'app-card';
+
+            // Determine link based on status
+            let linkUrl = '';
+            let linkTextKey = '';
+
+            if (app.status === 'public') {
+                linkUrl = `https://play.google.com/store/apps/details?id=${app.id}`;
+                linkTextKey = 'apps.public.desc';
+            } else if (app.status === 'closed_testing') {
+                linkUrl = `https://play.google.com/apps/testing/${app.id}`;
+                linkTextKey = 'apps.test.desc';
+            }
+
+            article.innerHTML = `
+                <a href="${linkUrl}" target="_blank">
+                    <img src="${app.image}" alt="${app.name} App" class="app-logo">
+                </a>
+                <h3 class="app-name">${app.name}</h3>
+                <a href="${linkUrl}" class="app-link" target="_blank" data-i18n="${linkTextKey}">View</a>
+            `;
+
+            if (app.status === 'public' && publicContainer) {
+                publicContainer.appendChild(article);
+            } else if (app.status === 'closed_testing' && closedContainer) {
+                closedContainer.appendChild(article);
+            }
+        });
+
+        // Re-initialize 3D tilt for new elements
+        init3DTilt();
+
+        // Re-apply current language to translate new elements
+        const currentLang = localStorage.getItem('lang') || 'en';
+        setLanguage(currentLang);
+
+    } catch (error) {
+        console.error('Error loading apps:', error);
+    }
+}
 
 // Language Logic
 function setLanguage(lang) {
@@ -209,7 +263,7 @@ function setLanguage(lang) {
     // Update buttons
     document.querySelectorAll('.lang-btn').forEach(btn => {
         btn.classList.remove('active');
-        if (btn.id === `btn-${lang}`) btn.classList.add('active');
+        if (btn.id === `btn - ${lang} `) btn.classList.add('active');
     });
 
     // Translate all elements with data-i18n
