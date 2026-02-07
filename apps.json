@@ -16,5 +16,11 @@
         "name": "DriveTracker",
         "image": "img/DriveTracker.png",
         "status": "public"
+    },
+    {
+        "id": "com.ialex5.icsimporter",
+        "name": "IcsImporter",
+        "image": "img/IcsImporter.png",
+        "status": "closed_testing"
     }
 ]

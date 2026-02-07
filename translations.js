@@ -17,6 +17,10 @@ const translations = {
         "policies.rogupdater": "RogUpdater Privacy Policy",
         "policies.sushimeter": "SushiMeter Privacy Policy",
         "policies.drivetracker": "DriveTracker Privacy Policy",
+        "policies.icsimporter": "ICS Importer Privacy Policy",
+        "apps.closed.info": "Want to try the latest features? These apps are in closed testing.",
+        "apps.closed.step1": "Join the tester group first:",
+        "apps.closed.join": "Join Google Tester Group",
         "footer.rights": "&copy; 2025 Alessandro Barbieri. All rights reserved.",
         "beer.text": "🍺 Buy me a beer",
         "typing.roles": ["Java Enthusiast", "Problem Solver", "Tech Explorer", "Pizza Lover"]
@@ -39,6 +43,10 @@ const translations = {
         "policies.rogupdater": "Privacy Policy RogUpdater",
         "policies.sushimeter": "Privacy Policy SushiMeter",
         "policies.drivetracker": "Privacy Policy DriveTracker",
+        "policies.icsimporter": "Privacy Policy ICS Importer",
+        "apps.closed.info": "Vuoi provare le ultime funzionalità? Queste app sono in fase di test chiuso.",
+        "apps.closed.step1": "Unisciti prima al gruppo tester:",
+        "apps.closed.join": "Unisciti al Gruppo Tester Google",
         "footer.rights": "&copy; 2025 Alessandro Barbieri. Tutti i diritti riservati.",
         "beer.text": "🍺 Offrimi una birra",
         "typing.roles": ["Appassionato di Java", "Problem Solver", "Esploratore Tech", "Amante della Pizza"]
