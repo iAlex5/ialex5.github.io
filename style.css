@@ -288,6 +288,15 @@ h2:hover::after {
     letter-spacing: 0.5px;
 }
 
+.app-desc {
+    font-size: 0.9em;
+    color: var(--text-secondary);
+    margin: 8px 0 16px 0;
+    text-align: center;
+    line-height: 1.4;
+    max-width: 250px;
+}
+
 .app-link {
     display: inline-block;
     margin-top: auto;

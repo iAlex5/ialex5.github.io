@@ -206,79 +206,101 @@ document.addEventListener("DOMContentLoaded", () => {
 async function loadApps() {
     try {
         const response = await fetch('apps.json');
-        const apps = await response.json();
-
-        const publicContainer = document.getElementById('public-apps-container');
-        const closedContainer = document.getElementById('closed-apps-container');
-
-        let closedAppsCount = 0;
-
-        apps.forEach(app => {
-            const article = document.createElement('article');
-            article.className = 'app-card';
-
-            // Determine link based on status
-            let linkUrl = `https://play.google.com/store/apps/details?id=${app.id}`;
-            let linkTextKey = '';
-
-            if (app.status === 'public') {
-                linkTextKey = 'apps.public.desc';
-            } else if (app.status === 'closed_testing') {
-                linkTextKey = 'apps.test.desc';
-                closedAppsCount++;
-            }
-
-            article.innerHTML = `
-                <a href="${linkUrl}" target="_blank">
-                    <img src="${app.image}" alt="${app.name} App" class="app-logo">
-                </a>
-                <h3 class="app-name">${app.name}</h3>
-                <a href="${linkUrl}" class="app-link" target="_blank" data-i18n="${linkTextKey}">View</a>
-            `;
-
-            if (app.status === 'public' && publicContainer) {
-                publicContainer.appendChild(article);
-            } else if (app.status === 'closed_testing' && closedContainer) {
-                closedContainer.appendChild(article);
-            }
-        });
-
-        // Handle empty closed apps state
-        const testerInfo = document.getElementById('tester-info');
-        if (closedAppsCount === 0 && closedContainer) {
-            if (testerInfo) {
-                testerInfo.style.display = 'none';
-            }
-            const emptyMessage = document.createElement('p');
-            emptyMessage.setAttribute('data-i18n', 'apps.closed.empty');
-            // Add some styling inline or class if needed (simplified here)
-            emptyMessage.style.textAlign = 'center';
-            emptyMessage.style.width = '100%';
-            emptyMessage.style.color = 'var(--text-secondary)';
-            closedContainer.appendChild(emptyMessage);
-        } else {
-            if (testerInfo) {
-                testerInfo.style.display = 'block'; // Ensure it's visible if apps exist
-            }
-        }
-
-        // Re-initialize 3D tilt for new elements
-        init3DTilt();
-
-        // Re-apply current language to translate new elements
-        const currentLang = localStorage.getItem('lang') || 'en';
-        setLanguage(currentLang);
-
+        window.loadedApps = await response.json();
+        renderApps();
     } catch (error) {
         console.error('Error loading apps:', error);
     }
 }
 
+function renderApps() {
+    const apps = window.loadedApps;
+    if (!apps) return;
+
+    const currentLang = localStorage.getItem('lang') || 'en';
+    const publicContainer = document.getElementById('public-apps-container');
+    const closedContainer = document.getElementById('closed-apps-container');
+
+    // Clear existing content to prevent duplicates
+    if (publicContainer) publicContainer.innerHTML = '';
+    if (closedContainer) closedContainer.innerHTML = '';
+
+    let closedAppsCount = 0;
+
+    apps.forEach(app => {
+        const article = document.createElement('article');
+        article.className = 'app-card';
+
+        // Determine link based on status
+        let linkUrl = `https://play.google.com/store/apps/details?id=${app.id}`;
+        let linkTextKey = '';
+
+        if (app.status === 'public') {
+            linkTextKey = 'apps.public.desc';
+        } else if (app.status === 'closed_testing') {
+            linkTextKey = 'apps.test.desc';
+            closedAppsCount++;
+        }
+
+        const description = app.description && app.description[currentLang] ? app.description[currentLang] : '';
+
+        article.innerHTML = `
+            <a href="${linkUrl}" target="_blank">
+                <img src="${app.image}" alt="${app.name} App" class="app-logo">
+            </a>
+            <h3 class="app-name">${app.name}</h3>
+            <p class="app-desc">${description}</p>
+            <a href="${linkUrl}" class="app-link" target="_blank" data-i18n="${linkTextKey}">View</a>
+        `;
+
+        if (app.status === 'public' && publicContainer) {
+            publicContainer.appendChild(article);
+        } else if (app.status === 'closed_testing' && closedContainer) {
+            closedContainer.appendChild(article);
+        }
+    });
+
+    // Handle empty closed apps state
+    const testerInfo = document.getElementById('tester-info');
+    if (closedAppsCount === 0 && closedContainer) {
+        if (testerInfo) {
+            testerInfo.style.display = 'none';
+        }
+        const emptyMessage = document.createElement('p');
+        emptyMessage.setAttribute('data-i18n', 'apps.closed.empty');
+        // Add some styling inline or class if needed (simplified here)
+        emptyMessage.style.textAlign = 'center';
+        emptyMessage.style.width = '100%';
+        emptyMessage.style.color = 'var(--text-secondary)';
+        closedContainer.appendChild(emptyMessage);
+    } else {
+        if (testerInfo) {
+            testerInfo.style.display = 'block'; // Ensure it's visible if apps exist
+        }
+    }
+
+    // Re-initialize 3D tilt for new elements
+    init3DTilt();
+
+    // Re-apply current language to translate static elements inside cards (like the buttons)
+    // We already handled the description manually, but buttons use data-i18n
+    document.querySelectorAll('.app-card [data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[currentLang] && translations[currentLang][key]) {
+            el.innerHTML = translations[currentLang][key];
+        }
+    });
+}
+
 // Language Logic
 function setLanguage(lang) {
     // Save preference
+    // Save preference
     localStorage.setItem('lang', lang);
     document.documentElement.lang = lang;
+
+    // Render apps in the new language
+    renderApps();
 
     // Update buttons
     document.querySelectorAll('.lang-btn').forEach(btn => {

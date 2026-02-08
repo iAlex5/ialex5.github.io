@@ -3,24 +3,40 @@
         "id": "com.ialex5.rogupdater",
         "name": "RogUpdater",
         "image": "img/RogUpdater.png",
-        "status": "public"
+        "status": "public",
+        "description": {
+            "en": "Keep your Rog Phone always updated to the last available version",
+            "it": "Tieni sempre aggiornato il tuo Rog Phone all'ultima versione disponibile"
+        }
     },
     {
         "id": "com.ialex5.sushiMeter",
         "name": "SushiMeter",
         "image": "img/SushiMeter.png",
-        "status": "public"
+        "status": "public",
+        "description": {
+            "en": "Count your sushi pieces and track your meals with Sushi Meter!",
+            "it": "Conta i tuoi pezzi di sushi e traccia i tuoi pasti con Sushi Meter!"
+        }
     },
     {
         "id": "com.ialex5.driveTracker",
         "name": "DriveTracker",
         "image": "img/DriveTracker.png",
-        "status": "public"
+        "status": "public",
+        "description": {
+            "en": "Track your trips, analyze driving statistics, and monitor your speed.",
+            "it": "Registra i tuoi viaggi, visualizza statistiche e monitora guida e velocità."
+        }
     },
     {
         "id": "com.ialex5.icsImporter",
         "name": "IcsImporter",
         "image": "img/IcsImporter.png",
-        "status": "closed_testing"
+        "status": "closed_testing",
+        "description": {
+            "en": "Import .ics files to your Google Calendar easily and quickly.",
+            "it": "Importa file .ics nel tuo Google Calendar facilmente e velocemente."
+        }
     }
 ]
