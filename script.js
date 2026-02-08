@@ -49,14 +49,23 @@ function typeWriter() {
 // Particle Network
 function initParticles() {
     const canvas = document.getElementById('particle-canvas');
+    if (!canvas) return;
+
     const ctx = canvas.getContext('2d');
-    let width, height;
     let particles = [];
-    const particleCount = 60; // Few particles for clean look
+    const particleCount = 60;
     const connectionDistance = 150;
     const mouseDistance = 200;
 
     let mouse = { x: null, y: null };
+
+    function resize() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        // Optional: Re-initialize particles to spread them out immediately upon resize
+        // This solves the issue of them being "clustered" in the old small area
+        initParticlesArray();
+    }
 
     window.addEventListener('resize', resize);
     window.addEventListener('mousemove', (e) => {
@@ -68,15 +77,10 @@ function initParticles() {
         mouse.y = null;
     });
 
-    function resize() {
-        width = canvas.width = window.innerWidth;
-        height = canvas.height = window.innerHeight;
-    }
-
     class Particle {
         constructor() {
-            this.x = Math.random() * width;
-            this.y = Math.random() * height;
+            this.x = Math.random() * canvas.width;
+            this.y = Math.random() * canvas.height;
             this.vx = (Math.random() - 0.5) * 0.5;
             this.vy = (Math.random() - 0.5) * 0.5;
             this.size = Math.random() * 2 + 1;
@@ -87,29 +91,29 @@ function initParticles() {
             this.x += this.vx;
             this.y += this.vy;
 
-            if (this.x < 0 || this.x > width) this.vx *= -1;
-            if (this.y < 0 || this.y > height) this.vy *= -1;
+            // Use canvas.width/height directly to ensure we always use current dimensions
+            if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
+            if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
         }
 
         draw() {
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
             ctx.fillStyle = this.color;
-            ctx.globalAlpha = 0.3; /** Base opacity */
+            ctx.globalAlpha = 0.3;
             ctx.fill();
         }
     }
 
-    function init() {
-        resize();
+    function initParticlesArray() {
+        particles = [];
         for (let i = 0; i < particleCount; i++) {
             particles.push(new Particle());
         }
-        animate();
     }
 
     function animate() {
-        ctx.clearRect(0, 0, width, height);
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
 
         for (let i = 0; i < particles.length; i++) {
             let p = particles[i];
@@ -137,7 +141,7 @@ function initParticles() {
                 let distance = Math.sqrt((p.x - mouse.x) ** 2 + (p.y - mouse.y) ** 2);
                 if (distance < mouseDistance) {
                     ctx.beginPath();
-                    ctx.strokeStyle = '#fff'; /* White line to mouse */
+                    ctx.strokeStyle = '#fff';
                     ctx.globalAlpha = (1 - (distance / mouseDistance)) * 0.5;
                     ctx.lineWidth = 0.8;
                     ctx.moveTo(p.x, p.y);
@@ -149,7 +153,9 @@ function initParticles() {
         requestAnimationFrame(animate);
     }
 
-    init();
+    // Initialize
+    resize(); // Sets initial size and particles
+    animate();
 }
 
 // 3D Tilt Effect
