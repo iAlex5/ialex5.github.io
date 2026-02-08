@@ -18,7 +18,7 @@
         "status": "public"
     },
     {
-        "id": "com.ialex5.icsimporter",
+        "id": "com.ialex5.icsImporter",
         "name": "IcsImporter",
         "image": "img/IcsImporter.png",
         "status": "closed_testing"
