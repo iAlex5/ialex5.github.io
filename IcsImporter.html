@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICS Importer - Import .ics files easily</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="policy-page">
+
+    <div class="lang-switch">
+        <button onclick="setLanguage('en')" class="lang-btn active" id="btn-en">EN</button>
+        <span class="divider">/</span>
+        <button onclick="setLanguage('it')" class="lang-btn" id="btn-it">IT</button>
+    </div>
+
+    <header>
+        <h1>ICS Importer</h1>
+    </header>
+    <div class="container">
+
+        <!-- English Content -->
+        <div id="policy-en">
+            <h2>About the App</h2>
+            <p>ICS Importer is the ultimate tool for managing your calendar events. Whether you receive event
+                invitations via email or download schedule files, ICS Importer makes it seamless to add them to your
+                Google Calendar.</p>
+
+            <h3>Key Features</h3>
+            <ul>
+                <li><strong>One-Click Import:</strong> Open .ics files directly from your email or file manager.</li>
+                <li><strong>Preview Events:</strong> Check event details like date, time, location, and description
+                    before importing.</li>
+                <li><strong>Calendar Selection:</strong> Choose exactly which Google Calendar you want to add the event
+                    to.</li>
+                <li><strong>Auto-Import:</strong> set up automatic importing for trusted sources.</li>
+            </ul>
+
+            <hr style="border: 0; border-top: 1px solid var(--glass-border); margin: 2rem 0;">
+
+            <h2>Terms of Service for "ICS Importer"</h2>
+            <p><strong>Last Updated: February 08, 2026</strong></p>
+            <p>Welcome to <strong>ICS Importer</strong>!</p>
+            <p>By using the <strong>ICS Importer</strong> application ("the App"), you agree to be bound by the
+                following Terms of Service ("Terms"). If you do not agree to these Terms, please do not use the App.</p>
+
+            <h3>1. Service Description</h3>
+            <p>ICS Importer is an Android application designed to help users view and import calendar files (.ics or
+                iCalendar format) into their personal Google Calendar.</p>
+            <p>The main features include:</p>
+            <ul>
+                <li>Opening and parsing .ics files from device storage or other applications (e.g., email clients, file
+                    managers).</li>
+                <li>Previewing events contained in the file.</li>
+                <li>Importing events into the Google Calendar selected by the user.</li>
+                <li>"Auto Import" functionality for quick background importing.</li>
+            </ul>
+
+            <h3>2. Privacy and User Data</h3>
+            <p>Your privacy is important to us.</p>
+            <ul>
+                <li><strong>Google Sign-In:</strong> The App uses Google Sign-In to authenticate the user and obtain
+                    authorized access to Google Calendar.</li>
+                <li><strong>Data Access:</strong> The App accesses your calendars (read and write) exclusively to
+                    execute requested functionalities (listing available calendars and creating new events).</li>
+                <li><strong>No Remote Storage:</strong> The App processes .ics file data locally on your device. We do
+                    not save, share, or transmit your calendar data or imported files to external servers owned by us.
+                </li>
+                <li><strong>Advertising:</strong> The App uses <strong>Google AdMob</strong> to display advertisements
+                    (banners and interstitials). AdMob may collect and use data to personalize ads based on your
+                    interests, in compliance with Google's policies.</li>
+            </ul>
+            <p>For more details, please refer to our <a href="privacyPolicy/IcsImporter.html" target="_blank">Privacy
+                    Policy</a>.</p>
+
+            <h3>3. Application Usage</h3>
+            <ul>
+                <li><strong>Responsibility:</strong> You are solely responsible for the .ics files you decide to import.
+                    We recommend always verifying the event preview before confirming import.</li>
+                <li><strong>Permissions:</strong> The App requires specific permissions to function, including Internet
+                    access (for Google APIs and Ads) and, on recent Android versions, permission to send notifications
+                    (to confirm auto-import results).</li>
+                <li><strong>Lawful Use:</strong> You agree not to use the App for illegal or unauthorized purposes.</li>
+            </ul>
+
+            <h3>4. Limitation of Liability</h3>
+            <p>The App is provided "as is" and "as available", without warranties of any kind, express or implied.</p>
+            <ul>
+                <li>We do not guarantee that the App will be error-free or uninterrupted.</li>
+                <li>In no event shall we be liable for direct, indirect, incidental, or consequential damages arising
+                    from the use or inability to use the App (including, but not limited to, data loss, event
+                    duplication, or synchronization errors).</li>
+            </ul>
+
+            <h3>5. Changes to Service and Terms</h3>
+            <p>We reserve the right to modify or discontinue the App (or any part thereof) at any time, with or without
+                notice. We may also update these Terms from time to time. By continuing to use the App after such
+                changes, you agree to the new Terms.</p>
+
+            <h3>6. Contact</h3>
+            <p>For questions or support regarding these Terms or the App, you can contact us at the support email
+                address associated with the App on the Google Play Store.</p>
+
+            <hr style="border: 0; border-top: 1px solid var(--glass-border); margin: 2rem 0;">
+
+            <h3>Privacy</h3>
+            <p>For information on how we handle your data, please refer to our <a href="privacyPolicy/IcsImporter.html"
+                    target="_blank">Privacy Policy</a>.</p>
+        </div>
+
+        <!-- Italian Content -->
+        <div id="policy-it" style="display: none;">
+            <h2>Informazioni sull'App</h2>
+            <p>ICS Importer è lo strumento definitivo per gestire i tuoi eventi del calendario. Che tu riceva inviti via
+                email o scarichi file di pianificazione, ICS Importer rende semplicissimo aggiungerli al tuo Google
+                Calendar.</p>
+
+            <h3>Funzionalità Principali</h3>
+            <ul>
+                <li><strong>Importazione con un Click:</strong> Apri i file .ics direttamente dalla tua email o dal file
+                    manager.</li>
+                <li><strong>Anteprima Eventi:</strong> Controlla i dettagli dell'evento come data, ora, luogo e
+                    descrizione prima di importare.</li>
+                <li><strong>Selezione Calendario:</strong> Scegli esattamente in quale Google Calendar aggiungere
+                    l'evento.</li>
+                <li><strong>Importazione Automatica:</strong> imposta l'importazione automatica per le fonti
+                    attendibili.</li>
+            </ul>
+
+            <hr style="border: 0; border-top: 1px solid var(--glass-border); margin: 2rem 0;">
+
+            <h2>Termini di Servizio per "ICS Importer"</h2>
+            <p><strong>Ultimo aggiornamento: 08 Febbraio 2026</strong></p>
+            <p>Benvenuto in <strong>ICS Importer</strong>!</p>
+            <p>Utilizzando l'applicazione <strong>ICS Importer</strong> ("l'App"), accetti di essere vincolato dai
+                seguenti Termini di Servizio ("Termini"). Se non accetti questi Termini, ti preghiamo di non utilizzare
+                l'App.</p>
+
+            <h3>1. Descrizione del Servizio</h3>
+            <p>ICS Importer è un'applicazione Android progettata per aiutare gli utenti a visualizzare e importare file
+                di calendario (formato .ics o iCalendar) nel proprio Google Calendar personale.</p>
+            <p>Le funzionalità principali includono:</p>
+            <ul>
+                <li>Apertura e parsing di file .ics dalla memoria del dispositivo o da altre applicazioni (es. client
+                    email, file manager).</li>
+                <li>Visualizzazione dell'anteprima degli eventi contenuti nel file.</li>
+                <li>Importazione degli eventi nel calendario Google selezionato dall'utente.</li>
+                <li>Funzionalità "Auto Import" per l'importazione rapida in background.</li>
+            </ul>
+
+            <h3>2. Privacy e Dati dell'Utente</h3>
+            <p>La tua privacy è importante per noi.</p>
+            <ul>
+                <li><strong>Google Sign-In:</strong> L'App utilizza Google Sign-In per autenticare l'utente e ottenere
+                    l'accesso autorizzato al Google Calendar.</li>
+                <li><strong>Accesso ai Dati:</strong> L'App accede ai tuoi calendari (lettura e scrittura)
+                    esclusivamente per eseguire le funzionalità richieste (elencare i calendari disponibili e creare
+                    nuovi eventi).</li>
+                <li><strong>Nessun Salvataggio Remoto:</strong> L'App processa i dati dei file .ics localmente sul tuo
+                    dispositivo. Non salviamo, condividiamo o trasmettiamo i tuoi dati di calendario o i file importati
+                    su server esterni di nostra proprietà.</li>
+                <li><strong>Pubblicità:</strong> L'App utilizza <strong>Google AdMob</strong> per mostrare annunci
+                    pubblicitari (banner e interstitial). AdMob può raccogliere e utilizzare dati per personalizzare gli
+                    annunci in base ai tuoi interessi, conformemente alle policy di Google.</li>
+            </ul>
+            <p>Per maggiori dettagli, fai riferimento alla nostra <a href="privacyPolicy/IcsImporter.html"
+                    target="_blank">Privacy Policy</a>.</p>
+
+            <h3>3. Utilizzo dell'Applicazione</h3>
+            <ul>
+                <li><strong>Responsabilità:</strong> Sei l'unico responsabile dei file .ics che decidi di importare. Ti
+                    consigliamo di verificare sempre l'anteprima degli eventi prima di confermare l'importazione.</li>
+                <li><strong>Permessi:</strong> L'App richiede permessi specifici per funzionare, inclusi l'accesso a
+                    Internet (per Google API e Ads) e, su versioni recenti di Android, il permesso di inviare notifiche
+                    (per confermare l'esito dell'importazione automatica).</li>
+                <li><strong>Uso Lecito:</strong> Accetti di non utilizzare l'App per scopi illegali o non autorizzati.
+                </li>
+            </ul>
+
+            <h3>4. Limitazione di Responsabilità</h3>
+            <p>L'App è fornita "così com'è" e "come disponibile", senza garanzie di alcun tipo, esplicite o implicite.
+            </p>
+            <ul>
+                <li>Non garantiamo che l'App sarà priva di errori o interruzioni.</li>
+                <li>In nessun caso saremo responsabili per danni diretti, indiretti, incidentali o consequenziali
+                    derivanti dall'uso o dall'impossibilità di utilizzare l'App (inclusi, ma non limitati a, perdita di
+                    dati, duplicazione di eventi nel calendario o errori di sincronizzazione).</li>
+            </ul>
+
+            <h3>5. Modifiche al Servizio e ai Termini</h3>
+            <p>Ci riserviamo il diritto di modificare o interrompere l'App (o qualsiasi parte di essa) in qualsiasi
+                momento, con o senza preavviso. Potremmo anche aggiornare questi Termini di volta in volta. Continuando
+                a utilizzare l'App dopo tali modifiche, accetti i nuovi Termini.</p>
+
+            <h3>6. Contatti</h3>
+            <p>Per domande o supporto riguardanti questi Termini o l'App, puoi contattarci all'indirizzo email di
+                supporto associato all'App sul Google Play Store.</p>
+
+            <hr style="border: 0; border-top: 1px solid var(--glass-border); margin: 2rem 0;">
+
+            <h3>Privacy</h3>
+            <p>Per informazioni su come gestiamo i tuoi dati, consulta la nostra <a
+                    href="privacyPolicy/IcsImporter.html" target="_blank">Informativa sulla Privacy</a>.</p>
+        </div>
+
+        <a href="index.html" class="back-link" data-i18n="policyTranslations.back">← Back to Home</a>
+    </div>
+    <footer>
+        <p data-i18n="footer.rights">&copy; 2025 Alessandro Barbieri. All rights reserved.</p>
+    </footer>
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
