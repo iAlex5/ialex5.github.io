@@ -38,5 +38,15 @@
             "en": "Import .ics files to your Google Calendar easily and quickly.",
             "it": "Importa file .ics nel tuo Google Calendar facilmente e velocemente."
         }
+    },
+    {
+        "id": "com.ialex5.teleSearch",
+        "name": "TeleSearch",
+        "image": "img/TeleSearch.png",
+        "status": "closed_testing",
+        "description": {
+            "en": "Search in your Telegram chats easily and quickly.",
+            "it": "Cerca tra le tue chat Telegram facilmente e velocemente."
+        }
     }
 ]
