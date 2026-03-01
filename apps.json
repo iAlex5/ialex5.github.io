@@ -40,7 +40,7 @@
         }
     },
     {
-        "id": "com.ialex5.teleSearch",
+        "id": "com.ialex5.telesearch",
         "name": "TeleSearch",
         "image": "img/TeleSearch.png",
         "status": "closed_testing",
