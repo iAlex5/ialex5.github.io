@@ -43,7 +43,7 @@
         "id": "com.ialex5.telesearch",
         "name": "TeleSearch",
         "image": "img/TeleSearch.png",
-        "status": "closed_testing",
+        "status": "public",
         "description": {
             "en": "Search in your Telegram chats easily and quickly.",
             "it": "Cerca tra le tue chat Telegram facilmente e velocemente."
