@@ -33,7 +33,7 @@
         "id": "com.ialex5.icsImporter",
         "name": "IcsImporter",
         "image": "img/IcsImporter.png",
-        "status": "closed_testing",
+        "status": "public",
         "description": {
             "en": "Import .ics files to your Google Calendar easily and quickly.",
             "it": "Importa file .ics nel tuo Google Calendar facilmente e velocemente."
