@@ -238,7 +238,7 @@ function renderApps() {
         article.className = 'app-card';
 
         // Determine link based on status
-        let linkUrl = `https://play.google.com/store/apps/details?id=${app.id}`;
+        let linkUrl = `https://play.google.com/store/apps/details?id=${app.id}&referrer=utm_source%3Dialex5.github.io`;
         let linkTextKey = '';
 
         if (app.status === 'public') {
