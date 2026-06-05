@@ -25,12 +25,10 @@
         <div id="policy-en">
             <h1>🔒 Privacy Policy – ICS Importer</h1>
             <p><strong>Effective Date: February 7, 2026</strong></p>
-            <p>Thank you for using ICS Importer. Your privacy is very important to us, and we are committed to being
-                transparent about how your information is handled.</p>
+            <p>Thank you for using ICS Importer. Your privacy is very important to us, and we are committed to being transparent about how your information is handled.</p>
+            
             <p><strong>In short:</strong><br>
-                ICS Importer helps you import calendar events from .ics files into your Google Calendar. The app does
-                not store your calendar data or personal information on our servers. All data flows directly between
-                your device and Google's services.</p>
+            ICS Importer helps you import calendar events from .ics files into your Google Calendar. The app does not store your calendar data or personal information on external servers. All data flows directly between your device and Google's services. The app displays advertisements using Google AdMob, which collects device and usage information, and we use Google's User Messaging Platform (UMP) to obtain GDPR-compliant consent.</p>
 
             <section>
                 <h2>1. What This App Does</h2>
@@ -45,243 +43,158 @@
 
             <section>
                 <h2>2. Information We Collect</h2>
-
                 <h3>2.1 Google Account Information</h3>
                 <p>When you sign in with Google, we access:</p>
                 <ul>
-                    <li><strong>Email address and profile name:</strong> Used for authentication purposes only</li>
-                    <li><strong>Google Calendar access:</strong> Required to retrieve your calendar list and create
-                        events</li>
+                    <li><strong>Email address and profile name:</strong> Used for authentication purposes only. This information is not stored by our app and is handled securely by Google's authentication system.</li>
+                    <li><strong>Google Calendar access:</strong> Required to retrieve your calendar list and create events in your selected Google Calendar.</li>
                 </ul>
-                <p><strong>Important:</strong> This information is not stored by our app. It is handled securely by
-                    Google's authentication system.</p>
 
                 <h3>2.2 Calendar Data</h3>
-                <p>The app accesses:</p>
-                <ul>
-                    <li>List of your Google Calendars (names and IDs)</li>
-                    <li>Calendar events being imported (titles, dates, times, descriptions, locations, attendees)</li>
-                </ul>
-                <p><strong>Storage:</strong> Calendar data is <em>not</em> permanently stored by the app. Events are
-                    processed in memory and sent directly to Google Calendar. Your calendar list is fetched dynamically
-                    when needed.</p>
+                <p>The app accesses your list of Google Calendars (names and IDs) and the calendar events being imported (titles, dates, times, descriptions, locations, attendees). This data is processed dynamically in memory and is not permanently stored or saved on any servers owned by us.</p>
 
-                <h3>2.3 User Preferences</h3>
-                <p>The app stores the following preferences locally on your device:</p>
-                <ul>
-                    <li>Auto-import setting (enabled/disabled)</li>
-                    <li>Default calendar selection (calendar ID and name)</li>
-                </ul>
-                <p>These preferences are stored in your device's local storage (Android SharedPreferences) and are not
-                    transmitted to any external server.</p>
+                <h3>2.3 Local Preferences</h3>
+                <p>The app stores your preferences (auto-import enabled/disabled, and default calendar selection ID and name) locally on your device in Android SharedPreferences. This data is not transmitted to external servers.</p>
 
                 <h3>2.4 File Access</h3>
-                <p>When you select or open an .ics file:</p>
+                <p>When you open an .ics file, the app reads the file contents temporarily in memory to extract event data. No permanent copy of the file is saved.</p>
+
+                <h3>2.5 Advertising (Google AdMob)</h3>
+                <p>This app uses Google AdMob to display advertisements. To serve ads, Google AdMob may automatically collect limited data, which includes:</p>
                 <ul>
-                    <li>The app reads the file contents to extract calendar event data</li>
-                    <li>Files are processed temporarily in memory only</li>
-                    <li>No permanent copy of the file is stored</li>
+                    <li>Advertising ID (provided by Android, which you can reset in your device settings)</li>
+                    <li>Device metadata (device model, operating system version, screen resolution)</li>
+                    <li>App usage data related to ad impressions and interactions</li>
+                    <li>Approximate location (based on IP address)</li>
+                    <li>Network information (carrier, connection type)</li>
                 </ul>
+                <p><strong>Important:</strong> Google user data accessed by Google APIs (such as calendar data or account information) is <em>never</em> used or shared for advertising purposes. AdMob data is collected independently. For users in the EU/EEA, a GDPR-compliant consent management mechanism (Google UMP SDK) is presented before any data is used for personalized advertisements.</p>
             </section>
 
             <section>
                 <h2>3. How We Use Your Information</h2>
-                <p>Your information is used solely to provide the app's functionality:</p>
+                <p>Your information is used solely to provide and support the app's functionality:</p>
                 <ul>
-                    <li><strong>Authentication:</strong> To verify your Google account</li>
-                    <li><strong>Calendar Import:</strong> To create events in your selected Google Calendar</li>
-                    <li><strong>User Experience:</strong> To remember your preferences (auto-import and default
-                        calendar)</li>
+                    <li><strong>App Functionality:</strong> Google sign-in is used to authenticate you, and the Calendar API is used to list your calendars and create events. Preferences are used locally to remember your settings.</li>
+                    <li><strong>Advertising:</strong> AdMob uses advertising identifiers to serve, limit, and personalize ads, subject to your choices and consent.</li>
                 </ul>
-                <p>We do not use your data for any other purpose, including analytics, advertising, or marketing.</p>
             </section>
 
             <section>
                 <h2>4. Third-Party Services</h2>
                 <p>The app integrates with the following third-party services:</p>
-
-                <h3>4.1 Google Sign-In API</h3>
-                <p><strong>Provider:</strong> Google LLC<br>
-                    <strong>Purpose:</strong> User authentication<br>
-                    <strong>Privacy Policy:</strong> <a href="https://policies.google.com/privacy"
-                        target="_blank">https://policies.google.com/privacy</a>
-                </p>
-
-                <h3>4.2 Google Calendar API</h3>
-                <p><strong>Provider:</strong> Google LLC<br>
-                    <strong>Purpose:</strong> Retrieve calendar list and create calendar events<br>
-                    <strong>Privacy Policy:</strong> <a href="https://policies.google.com/privacy"
-                        target="_blank">https://policies.google.com/privacy</a>
-                </p>
-                <p><strong>OAuth Scopes:</strong> The app requests the following restricted Google Calendar scopes:</p>
                 <ul>
-                    <li><code>https://www.googleapis.com/auth/calendar.events</code> — used to create and manage
-                        calendar events</li>
-                    <li><code>https://www.googleapis.com/auth/calendar.readonly</code> — used to read your list of
-                        calendars</li>
+                    <li><strong>Google Sign-In API</strong>
+                        <br><strong>Provider:</strong> Google LLC
+                        <br><strong>Purpose:</strong> User authentication
+                        <br><strong>Privacy Policy:</strong> <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a>
+                    </li>
+                    <li><strong>Google Calendar API</strong>
+                        <br><strong>Provider:</strong> Google LLC
+                        <br><strong>Purpose:</strong> Retrieve calendar list and create events
+                        <br><strong>OAuth Scopes Used:</strong> 
+                        <ul>
+                            <li><code>https://www.googleapis.com/auth/calendar.events</code> — to create and manage events</li>
+                            <li><code>https://www.googleapis.com/auth/calendar.readonly</code> — to read the list of calendars</li>
+                        </ul>
+                    </li>
+                    <li><strong>Google AdMob (Advertising)</strong>
+                        <br><strong>Provider:</strong> Google LLC / Google Ireland Limited
+                        <br><strong>Purpose:</strong> To display in-app advertisements
+                        <br><strong>Privacy Policy:</strong> <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a>
+                        <br><strong>Ad Settings:</strong> <a href="https://myadcenter.google.com" target="_blank">https://myadcenter.google.com</a>
+                        <br><strong>Mandatory Google Disclosure:</strong> Please review how Google processes data when you use this app at: <a href="https://policies.google.com/technologies/partner-sites" target="_blank">https://policies.google.com/technologies/partner-sites</a>
+                    </li>
                 </ul>
-                <p>The app does <strong>not</strong> request the broad <code>calendar</code> scope. You can revoke this
-                    access at any time in your Google Account settings.</p>
-
-                <h3>4.3 Advertising</h3>
-                <p>This app uses Google AdMob to display advertisements.</p>
-                <p><strong>Important:</strong> Google user data (such as calendar data or your Google account
-                    information) is <em>never</em> used for advertising purposes. AdMob collects its own separate
-                    set of data independently from any Google API data accessed by this app.</p>
-                <p>AdMob may collect:</p>
-                <ul>
-                    <li>Advertising ID (provided by Android, not derived from Google API data)</li>
-                    <li>Device information (device model, OS version, screen resolution)</li>
-                    <li>App usage data (app opens, ad impressions and interactions)</li>
-                    <li>Approximate location (based on IP address only)</li>
-                    <li>Network information (carrier, connection type)</li>
-                </ul>
-                <p>This data is collected solely by Google AdMob for ad serving and is governed by Google's own
-                    privacy policy. It is entirely separate from any calendar or account data accessed via Google APIs.
-                </p>
-                <p>You can reset your Advertising ID or opt-out of personalized ads through your device
-                    settings. For EU/EEA users, a GDPR consent mechanism is provided before any ad data is
-                    collected.</p>
-                <p><strong>AdMob Privacy Policy:</strong> <a href="https://policies.google.com/privacy"
-                        target="_blank">https://policies.google.com/privacy</a></p>
-                <p><strong>Ad Settings:</strong> <a href="https://myadcenter.google.com"
-                        target="_blank">https://myadcenter.google.com</a></p>
             </section>
 
             <section>
-                <h2>5. Data Storage and Security</h2>
-
+                <h2>5. Data Storage, Security, and Retention</h2>
                 <h3>5.1 No Remote Storage</h3>
-                <p><strong>Important:</strong> ICS Importer does not operate its own backend servers. All calendar data
-                    flows directly from your device to Google's servers via secure HTTPS connections.</p>
-                <p>We <strong>never</strong> receive, store, or process your calendar data on any servers owned or
-                    operated by us.</p>
+                <p>We do not operate backend servers. All calendar data flows directly from your device to Google's servers via secure HTTPS connections. We never receive, store, or process your calendar data or account credentials on any servers owned or operated by us.</p>
 
                 <h3>5.2 Local Storage</h3>
-                <p>Only the following data is stored locally on your device:</p>
-                <ul>
-                    <li>User preferences (auto-import setting, default calendar)</li>
-                </ul>
-                <p>This data is stored unencrypted in Android SharedPreferences, as it contains no sensitive personal
-                    information.</p>
+                <p>Preferences (auto-import, default calendar ID) are stored unencrypted in Android SharedPreferences, as they contain no sensitive personal information.</p>
 
                 <h3>5.3 Security Measures</h3>
                 <ul>
-                    <li><strong>Encrypted Communications:</strong> All network communications use HTTPS/TLS encryption
-                    </li>
-                    <li><strong>OAuth 2.0:</strong> Industry-standard authentication protocol; the app does not handle
-                        or store passwords</li>
-                    <li><strong>App Sandbox:</strong> Android's app sandbox isolates the app's data from other apps
-                    </li>
-                    <li><strong>Minimal Permissions:</strong> The app requests only the minimum necessary permissions
-                    </li>
+                    <li><strong>Encrypted Communications:</strong> All network communication is fully encrypted via HTTPS/TLS.</li>
+                    <li><strong>OAuth 2.0:</strong> Industry-standard authentication; the app does not store or handle your Google password.</li>
+                    <li><strong>App Sandbox:</strong> Android's isolation environment prevents other apps from accessing local preferences.</li>
                 </ul>
+
+                <h3>5.4 Data Retention</h3>
+                <p>Calendar data and account details are processed in memory during the active session and are discarded immediately upon closing the app or completing the import. Local preferences remain stored persistently until you clear app data or uninstall the app. You can clear this data at any time via Android Settings &gt; Apps &gt; ICS Importer &gt; Storage &gt; Clear Data. AdMob data retention is governed by Google's Privacy Policy.</p>
             </section>
 
             <section>
-                <h2>6. Data Retention and Deletion</h2>
-
-                <h3>6.1 Google User Data (Calendar and Account)</h3>
-                <p>ICS Importer does <strong>not</strong> retain any Google user data:</p>
-                <ul>
-                    <li><strong>Calendar data</strong> (event titles, dates, descriptions, attendees) is processed
-                        entirely in memory during the active app session and is <em>never</em> saved — not on our
-                        servers, not locally on your device, and not shared with any third party.</li>
-                    <li><strong>Google account information</strong> (email address, profile name) is used only during
-                        authentication and is not stored by the app.</li>
-                    <li>Your <strong>calendar list</strong> (names and IDs) is fetched dynamically each time it is
-                        needed and is never cached or saved.</li>
-                </ul>
-                <p>Once you close the app or complete an import, all Google user data is discarded from memory
-                    immediately.</p>
-
-                <h3>6.2 Local Preferences</h3>
-                <p>The only data stored persistently on your device is your user preferences (auto-import setting and
-                    default calendar selection). This data is retained until you manually clear it or uninstall the app.
-                    You can delete it at any time via Android Settings &gt; Apps &gt; ICS Importer &gt; Storage &gt;
-                    Clear Data.</p>
-
-                <h3>6.3 Requesting Data Deletion</h3>
-                <p>Since we do not store any data on external servers, there is nothing to delete on our end. To remove
-                    all locally stored app preferences, use the Clear Data option described above. To remove events
-                    imported into your Google Calendar, delete them directly in Google Calendar.</p>
-            </section>
-
-            <section>
-                <h2>7. Permissions Required</h2>
+                <h2>6. Permissions Required</h2>
                 <p>The app requests the following permissions:</p>
                 <ul>
-                    <li><strong>Internet Access:</strong> Required to communicate with Google authentication and
-                        Calendar APIs, and (in future) to load advertisements</li>
-                    <li><strong>Post Notifications (Android 13+):</strong> Used to notify you when auto-import
-                        completes. You can deny this permission; auto-import will still work, but no notification will
-                        be shown</li>
+                    <li><strong>Internet Access (<code>android.permission.INTERNET</code>):</strong> Required to communicate with Google Calendar APIs, load ads, and check consent choices.</li>
+                    <li><strong>Post Notifications (<code>android.permission.POST_NOTIFICATIONS</code>):</strong> (Android 13+) Used to notify you when auto-import completes. You can deny this; auto-import will still function normally.</li>
                 </ul>
             </section>
 
             <section>
-                <h2>8. Your Rights and Controls</h2>
+                <h2>7. Your Rights and Controls</h2>
                 <p>You have full control over your data:</p>
                 <ul>
-                    <li><strong>Sign In/Out:</strong> You can sign in or out of your Google account at any time within
-                        the app</li>
-                    <li><strong>Revoke Access:</strong> You can revoke the app's access to your Google Calendar at any
-                        time through your Google Account settings</li>
-                    <li><strong>Delete App Data:</strong> You can clear all app data (including preferences) via
-                        Android Settings > Apps > ICS Importer > Storage > Clear Data</li>
-                    <li><strong>Delete Imported Events:</strong> You can delete any events imported by the app directly
-                        in Google Calendar</li>
-                    <li><strong>Disable Notifications:</strong> You can disable or control app notifications in your
-                        device settings</li>
+                    <li><strong>Sign Out:</strong> You can sign out of your Google account at any time within the app.</li>
+                    <li><strong>Revoke Access:</strong> You can revoke the app's access to your Google Calendar at any time in your Google Account security settings.</li>
+                    <li><strong>Delete App Data:</strong> You can wipe all local preferences by clearing app data in Android Settings or uninstalling the app.</li>
+                    <li><strong>Ad Consent Choices:</strong> You can reset your Advertising ID or opt-out of personalized ads in your Android device's settings. For users in the EU/EEA, you can change or withdraw your consent preferences at any time through the ad consent settings inside the app.</li>
                 </ul>
             </section>
 
             <section>
-                <h2>9. Children's Privacy</h2>
-                <p>ICS Importer is designed for general audiences and does not knowingly collect personal information
-                    from children under the age of 13.</p>
-                <p>If we learn that we have collected personal information from a child under 13 without parental
-                    consent, we will take steps to delete that information as quickly as possible.</p>
+                <h2>8. Children's Privacy</h2>
+                <p>ICS Importer is designed for general audiences and does not knowingly collect personal information from children under the age of 13. AdMob serves ads in accordance with Google's family and content rating policies.</p>
             </section>
 
             <section>
-                <h2>10. International Users and Compliance</h2>
+                <h2>9. Additional Information for European Union Users (GDPR)</h2>
+                <p>If you reside in the European Union or the European Economic Area (EEA), the following provisions apply to you under the General Data Protection Regulation (GDPR).</p>
 
-                <h3>9.1 GDPR (European Union)</h3>
-                <p>For users in the EU/EEA, we process your data based on:</p>
+                <h3>9.1 Data Controller</h3>
+                <p>The Data Controller is Alessandro Barbieri. For any privacy-related questions or requests, you can contact the Data Controller at: <a href="mailto:ale.ialex5@yahoo.it">ale.ialex5@yahoo.it</a>.</p>
+
+                <h3>9.2 Legal Bases for Processing</h3>
+                <p>We process information under the following valid legal bases:</p>
                 <ul>
-                    <li><strong>User Consent:</strong> For accessing your Google Calendar</li>
-                    <li><strong>Legitimate Interest:</strong> For providing app functionality</li>
+                    <li><strong>Performance of a Contract (Art. 6(1)(b) GDPR):</strong> To authenticate your Google account, retrieve your calendar list, and create events in your Google Calendar as requested. Calendar data is processed strictly in-memory during active use.</li>
+                    <li><strong>User Consent (Art. 6(1)(a) GDPR):</strong> To display personalized or non-personalized advertisements via Google AdMob, gathered through the Google User Messaging Platform (UMP) SDK. You can withdraw your consent at any time.</li>
+                    <li><strong>Legitimate Interest (Art. 6(1)(f) GDPR):</strong> For maintaining app security, preventing fraud, and conducting basic ad operations (such as frequency capping).</li>
                 </ul>
-                <p>You have the right to access, rectify, erase, and port your data, as well as to object to
-                    processing. When AdMob is implemented, explicit consent will be required for personalized ads.</p>
 
-                <h3>9.2 CCPA (California, USA)</h3>
-                <p>For California residents:</p>
+                <h3>9.3 International Data Transfers</h3>
+                <p>Information processed by third-party services like Google AdMob may be transferred to, and stored in, countries outside the EEA, including the United States. Google relies on Standard Contractual Clauses (SCCs) approved by the European Commission and is certified under the EU-US Data Privacy Framework to guarantee a compliant level of data protection. Similarly, your Google Calendar data is securely transmitted directly to Google's infrastructure.</p>
+
+                <h3>9.4 Your Rights Under GDPR</h3>
+                <p>As a data subject, you have the right of access (Art. 15), rectification (Art. 16), erasure (Art. 17), restriction of processing (Art. 18), data portability (Art. 20), objection (Art. 21), and the right to withdraw consent (Art. 7(3)) at any time. To exercise these rights (where applicable, though your data is stored only locally), you can clear your app data, revoke access via Google, or contact the Data Controller's email.</p>
+
+                <h3>9.5 Right to Lodge a Complaint</h3>
+                <p>You have the right to lodge a complaint with a supervisory authority. In Italy, the supervisory authority is the <strong>Garante per la protezione dei dati personali</strong> (<a href="https://www.garanteprivacy.it" target="_blank">www.garanteprivacy.it</a>).</p>
+            </section>
+
+            <section>
+                <h2>10. Additional Information for California Residents (CCPA)</h2>
+                <p>For residents of California, USA, under the California Consumer Privacy Act (CCPA):</p>
                 <ul>
-                    <li>Personal information collected includes email and calendar data</li>
-                    <li>This information is used for service functionality only</li>
-                    <li><strong>We do not sell your personal information</strong></li>
-                    <li>You have the right to access and delete your personal information</li>
+                    <li><strong>We do not sell your personal information.</strong></li>
+                    <li>The app accesses email and calendar data for functionality, processing it in-memory. Third-party ad networks may collect device identifiers and usage statistics as detailed in Section 2.5.</li>
+                    <li>You have the right to access and delete your local data (which can be completed directly by clearing the app data or uninstalling the app).</li>
                 </ul>
             </section>
 
             <section>
                 <h2>11. Changes to This Privacy Policy</h2>
-                <p>We may update this Privacy Policy from time to time to reflect changes in the app or legal
-                    requirements. Notable future changes include:</p>
-                <ul>
-                    <li>Integration of Google AdMob advertising</li>
-                    <li>Potential addition of analytics or crash reporting</li>
-                </ul>
-                <p>The updated policy will always be available at this same link. We recommend checking it
-                    periodically. The "Effective Date" at the top indicates when the policy was last updated.</p>
+                <p>We may update this Privacy Policy from time to time. The updated policy will always be available at this same link. The "Effective Date" at the top indicates when the policy was last updated.</p>
             </section>
 
             <section>
                 <h2>12. Contact Us</h2>
-                <p>If you have any questions or concerns about this Privacy Policy or the app's data practices, please
-                    contact us:</p>
+                <p>If you have any questions or concerns about this Privacy Policy, please contact us at:</p>
                 <p>📧 <a href="mailto:ale.ialex5@yahoo.it">ale.ialex5@yahoo.it</a></p>
             </section>
 
@@ -292,12 +205,10 @@
         <div id="policy-it" style="display: none;">
             <h1>🔒 Informativa sulla Privacy – ICS Importer</h1>
             <p><strong>Data di entrata in vigore: 7 Febbraio 2026</strong></p>
-            <p>Grazie per aver scelto ICS Importer. La tua privacy è molto importante per noi e ci impegniamo ad essere
-                trasparenti su come vengono gestite le tue informazioni.</p>
+            <p>Grazie per aver scelto ICS Importer. La tua privacy è molto importante per noi e ci impegniamo ad essere trasparenti su come vengono gestite le tue informazioni.</p>
+            
             <p><strong>In breve:</strong><br>
-                ICS Importer ti aiuta a importare eventi del calendario da file .ics nel tuo Google Calendar. L'app non
-                memorizza i tuoi dati del calendario o informazioni personali sui nostri server. Tutti i dati fluiscono
-                direttamente tra il tuo dispositivo e i servizi di Google.</p>
+            ICS Importer ti aiuta a importare eventi di calendario da file .ics nel tuo Google Calendar. L'app non memorizza i tuoi dati del calendario o le informazioni personali su server esterni. Tutti i dati fluiscono direttamente tra il tuo dispositivo e i servizi di Google. L'app mostra annunci pubblicitari tramite Google AdMob, che raccoglie informazioni sul dispositivo e sull'utilizzo, e utilizziamo la User Messaging Platform (UMP) di Google per raccogliere il consenso conforme al GDPR.</p>
 
             <section>
                 <h2>1. Cosa Fa Questa App</h2>
@@ -305,262 +216,165 @@
                 <ul>
                     <li>Importare eventi del calendario da file .ics (iCalendar) nel tuo Google Calendar</li>
                     <li>Visualizzare in anteprima gli eventi prima di importarli</li>
-                    <li>Importare automaticamente gli eventi in un calendario predefinito di tua scelta</li>
+                    <li>Importare automaticamente gli eventi in un calendario predefinito a tua scelta</li>
                 </ul>
                 <p>L'app è progettata per essere semplice, sicura e rispettosa della tua privacy.</p>
             </section>
 
             <section>
                 <h2>2. Informazioni che Raccogliamo</h2>
-
                 <h3>2.1 Informazioni sull'Account Google</h3>
                 <p>Quando accedi con Google, accediamo a:</p>
                 <ul>
-                    <li><strong>Indirizzo email e nome del profilo:</strong> Utilizzati solo per scopi di
-                        autenticazione</li>
-                    <li><strong>Accesso a Google Calendar:</strong> Necessario per recuperare l'elenco dei tuoi
-                        calendari e creare eventi</li>
+                    <li><strong>Indirizzo email e nome del profilo:</strong> Utilizzati solo a scopo di autenticazione. Queste informazioni non sono memorizzate dall'app e sono gestite in modo sicuro dal sistema di autenticazione di Google.</li>
+                    <li><strong>Accesso a Google Calendar:</strong> Richiesto per recuperare l'elenco dei tuoi calendari e creare eventi nel calendario da te selezionato.</li>
                 </ul>
-                <p><strong>Importante:</strong> Queste informazioni non vengono memorizzate dalla nostra app. Sono
-                    gestite in modo sicuro dal sistema di autenticazione di Google.</p>
 
                 <h3>2.2 Dati del Calendario</h3>
-                <p>L'app accede a:</p>
-                <ul>
-                    <li>Elenco dei tuoi Google Calendar (nomi e ID)</li>
-                    <li>Eventi del calendario da importare (titoli, date, orari, descrizioni, luoghi, partecipanti)
-                    </li>
-                </ul>
-                <p><strong>Archiviazione:</strong> I dati del calendario <em>non</em> vengono memorizzati
-                    permanentemente dall'app. Gli eventi vengono elaborati in memoria e inviati direttamente a Google
-                    Calendar. L'elenco dei tuoi calendari viene recuperato dinamicamente quando necessario.</p>
+                <p>L'app accede all'elenco dei tuoi Google Calendar (nomi e ID) e agli eventi da importare (titoli, date, orari, descrizioni, luoghi, partecipanti). Questi dati sono elaborati temporaneamente in memoria e non vengono archiviati in modo permanente su server di nostra proprietà.</p>
 
-                <h3>2.3 Preferenze Utente</h3>
-                <p>L'app memorizza le seguenti preferenze localmente sul tuo dispositivo:</p>
-                <ul>
-                    <li>Impostazione di importazione automatica (abilitata/disabilitata)</li>
-                    <li>Selezione del calendario predefinito (ID e nome del calendario)</li>
-                </ul>
-                <p>Queste preferenze sono memorizzate nell'archiviazione locale del dispositivo (Android
-                    SharedPreferences) e non vengono trasmesse ad alcun server esterno.</p>
+                <h3>2.3 Preferenze Locali</h3>
+                <p>L'app memorizza le tue preferenze (importazione automatica abilitata/disabilitata e ID e nome del calendario predefinito) localmente sul tuo dispositivo nelle SharedPreferences di Android. Questi dati non vengono trasmessi a server esterni.</p>
 
                 <h3>2.4 Accesso ai File</h3>
-                <p>Quando selezioni o apri un file .ics:</p>
+                <p>Quando apri un file .ics, l'app legge il contenuto del file temporaneamente in memoria per estrarre i dati degli eventi. Non viene salvata alcuna copia permanente del file sul dispositivo.</p>
+
+                <h3>2.5 Pubblicità (Google AdMob)</h3>
+                <p>Questa app utilizza Google AdMob per visualizzare annunci pubblicitari. Per pubblicare gli annunci, Google AdMob potrebbe raccogliere automaticamente informazioni limitate, tra cui:</p>
                 <ul>
-                    <li>L'app legge il contenuto del file per estrarre i dati degli eventi del calendario</li>
-                    <li>I file vengono elaborati temporaneamente solo in memoria</li>
-                    <li>Non viene memorizzata alcuna copia permanente del file</li>
+                    <li>ID pubblicitario (fornito da Android, che puoi reimpostare nelle impostazioni del dispositivo)</li>
+                    <li>Metadati del dispositivo (modello, versione del sistema operativo, risoluzione dello schermo)</li>
+                    <li>Dati sull'utilizzo dell'app correlati a impressioni e interazioni con gli annunci</li>
+                    <li>Posizione approssimativa (basata sull'indirizzo IP)</li>
+                    <li>Informazioni sulla rete (operatore telefonico, tipo di connessione)</li>
                 </ul>
+                <p><strong>Importante:</strong> I dati utente di Google a cui si accede tramite le API di Google (come i dati del calendario o le informazioni sull'account) non vengono <em>mai</em> utilizzati o condivisi per scopi pubblicitari. I dati di AdMob sono raccolti in modo indipendente. Per gli utenti dell'UE/SEE, viene presentato un modulo conforme al GDPR (Google UMP SDK) per il consenso prima dell'uso di annunci personalizzati.</p>
             </section>
 
             <section>
                 <h2>3. Come Utilizziamo le Tue Informazioni</h2>
-                <p>Le tue informazioni vengono utilizzate esclusivamente per fornire le funzionalità dell'app:</p>
+                <p>Le tue informazioni vengono utilizzate esclusivamente per fornire e supportare le funzionalità dell'app:</p>
                 <ul>
-                    <li><strong>Autenticazione:</strong> Per verificare il tuo account Google</li>
-                    <li><strong>Importazione del Calendario:</strong> Per creare eventi nel Google Calendar
-                        selezionato</li>
-                    <li><strong>Esperienza Utente:</strong> Per ricordare le tue preferenze (importazione automatica e
-                        calendario predefinito)</li>
+                    <li><strong>Funzionalità dell'App:</strong> L'accesso con Google viene utilizzato per autenticarti, mentre le API di Calendar vengono utilizzate per elencare i calendari e creare eventi. Le preferenze vengono utilizzate localmente per ricordare le tue impostazioni.</li>
+                    <li><strong>Pubblicità:</strong> AdMob utilizza gli identificatori pubblicitari per pubblicare, limitare e personalizzare gli annunci, in conformità con le tue scelte e il tuo consenso.</li>
                 </ul>
-                <p>Non utilizziamo i tuoi dati per nessun altro scopo, inclusi analisi, pubblicità o marketing.</p>
             </section>
 
             <section>
                 <h2>4. Servizi di Terze Parti</h2>
                 <p>L'app si integra con i seguenti servizi di terze parti:</p>
-
-                <h3>4.1 Google Sign-In API</h3>
-                <p><strong>Provider:</strong> Google LLC<br>
-                    <strong>Scopo:</strong> Autenticazione utente<br>
-                    <strong>Informativa sulla Privacy:</strong> <a href="https://policies.google.com/privacy"
-                        target="_blank">https://policies.google.com/privacy</a>
-                </p>
-
-                <h3>4.2 Google Calendar API</h3>
-                <p><strong>Provider:</strong> Google LLC<br>
-                    <strong>Scopo:</strong> Recuperare l'elenco dei calendari e creare eventi del calendario<br>
-                    <strong>Informativa sulla Privacy:</strong> <a href="https://policies.google.com/privacy"
-                        target="_blank">https://policies.google.com/privacy</a>
-                </p>
-                <p><strong>Scope OAuth:</strong> L'app richiede i seguenti scope ristretti di Google Calendar:</p>
                 <ul>
-                    <li><code>https://www.googleapis.com/auth/calendar.events</code> — utilizzato per creare e gestire
-                        gli eventi del calendario</li>
-                    <li><code>https://www.googleapis.com/auth/calendar.readonly</code> — utilizzato per leggere l'elenco
-                        dei tuoi calendari</li>
+                    <li><strong>Google Sign-In API</strong>
+                        <br><strong>Fornitore:</strong> Google LLC
+                        <br><strong>Scopo:</strong> Autenticazione dell'utente
+                        <br><strong>Informativa sulla Privacy:</strong> <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a>
+                    </li>
+                    <li><strong>Google Calendar API</strong>
+                        <br><strong>Fornitore:</strong> Google LLC
+                        <br><strong>Scopo:</strong> Recupero elenco calendari e creazione eventi
+                        <br><strong>Scope OAuth utilizzati:</strong> 
+                        <ul>
+                            <li><code>https://www.googleapis.com/auth/calendar.events</code> — per creare e gestire eventi</li>
+                            <li><code>https://www.googleapis.com/auth/calendar.readonly</code> — per leggere l'elenco dei calendari</li>
+                        </ul>
+                    </li>
+                    <li><strong>Google AdMob (Pubblicità)</strong>
+                        <br><strong>Fornitore:</strong> Google LLC / Google Ireland Limited
+                        <br><strong>Scopo:</strong> Visualizzazione di annunci pubblicitari in-app
+                        <br><strong>Informativa sulla Privacy:</strong> <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a>
+                        <br><strong>Impostazioni Annunci:</strong> <a href="https://myadcenter.google.com" target="_blank">https://myadcenter.google.com</a>
+                        <br><strong>Informativa Obbligatoria di Google:</strong> Ti invitiamo a consultare le modalità di utilizzo dei dati da parte di Google quando utilizzi questa app al link: <a href="https://policies.google.com/technologies/partner-sites" target="_blank">https://policies.google.com/technologies/partner-sites</a>
+                    </li>
                 </ul>
-                <p>L'app <strong>non</strong> richiede lo scope generico <code>calendar</code>. Puoi revocare questo
-                    accesso in qualsiasi momento nelle impostazioni del tuo account Google.</p>
-
-                <h3>4.3 Pubblicità</h3>
-                <p>Questa app utilizza Google AdMob per la visualizzazione di annunci pubblicitari.</p>
-                <p><strong>Importante:</strong> I dati utente Google (come i dati del calendario o le informazioni
-                    dell'account Google) <em>non vengono mai</em> utilizzati per scopi pubblicitari. AdMob raccoglie
-                    una serie di dati propri, del tutto separati e indipendenti dai dati delle API Google accessibili
-                    da questa app.</p>
-                <p>AdMob potrebbe raccogliere autonomamente:</p>
-                <ul>
-                    <li>ID pubblicitario (fornito da Android, non derivato dai dati delle API Google)</li>
-                    <li>Informazioni sul dispositivo (modello, versione del sistema operativo, risoluzione schermo)</li>
-                    <li>Dati sull'utilizzo dell'app (aperture dell'app, impressioni e interazioni con gli annunci)</li>
-                    <li>Posizione approssimativa (basata sull'indirizzo IP)</li>
-                    <li>Informazioni di rete (operatore, tipo di connessione)</li>
-                </ul>
-                <p>Questi dati vengono raccolti esclusivamente da Google AdMob per la pubblicazione degli annunci e
-                    sono regolati dalla propria informativa sulla privacy di Google. Sono completamente separati da
-                    qualsiasi dato del calendario o dell'account accessibile tramite le API Google.</p>
-                <p>Puoi reimpostare il tuo ID pubblicitario o disattivare gli annunci personalizzati tramite le
-                    impostazioni del dispositivo. Per gli utenti dell'UE/SEE, viene fornito un meccanismo di consenso
-                    GDPR prima di qualsiasi raccolta di dati pubblicitari.</p>
-                <p><strong>Informativa sulla Privacy di AdMob:</strong> <a href="https://policies.google.com/privacy"
-                        target="_blank">https://policies.google.com/privacy</a></p>
-                <p><strong>Impostazioni Annunci:</strong> <a href="https://myadcenter.google.com"
-                        target="_blank">https://myadcenter.google.com</a></p>
             </section>
 
             <section>
-                <h2>5. Archiviazione e Sicurezza dei Dati</h2>
-
+                <h2>5. Archiviazione, Sicurezza e Conservazione dei Dati</h2>
                 <h3>5.1 Nessuna Archiviazione Remota</h3>
-                <p><strong>Importante:</strong> ICS Importer non gestisce propri server backend. Tutti i dati del
-                    calendario fluiscono direttamente dal tuo dispositivo ai server di Google tramite connessioni HTTPS
-                    sicure.</p>
-                <p>Noi <strong>mai</strong> riceviamo, memorizziamo o elaboriamo i tuoi dati del calendario su server di
-                    nostra proprietà o gestiti da noi.</p>
+                <p>Non gestiamo server backend. Tutti i dati del calendario fluiscono direttamente dal tuo dispositivo ai server di Google tramite connessioni HTTPS sicure. Non riceviamo, memorizziamo o elaboriamo mai i tuoi dati del calendario o le credenziali dell'account su server di nostra proprietà o gestiti da noi.</p>
 
                 <h3>5.2 Archiviazione Locale</h3>
-                <p>Solo i seguenti dati vengono memorizzati localmente sul tuo dispositivo:</p>
-                <ul>
-                    <li>Preferenze utente (impostazione di importazione automatica, calendario predefinito)</li>
-                </ul>
-                <p>Questi dati sono memorizzati non crittografati in Android SharedPreferences, poiché non contengono
-                    informazioni personali sensibili.</p>
+                <p>Le preferenze (importazione automatica, ID del calendario predefinito) sono memorizzate non crittografate in Android SharedPreferences, poiché non contengono informazioni personali sensibili.</p>
 
                 <h3>5.3 Misure di Sicurezza</h3>
                 <ul>
-                    <li><strong>Comunicazioni Crittografate:</strong> Tutte le comunicazioni di rete utilizzano la
-                        crittografia HTTPS/TLS</li>
-                    <li><strong>OAuth 2.0:</strong> Protocollo di autenticazione standard del settore; l'app non
-                        gestisce né memorizza password</li>
-                    <li><strong>Sandbox dell'App:</strong> La sandbox di Android isola i dati dell'app da altre app
-                    </li>
-                    <li><strong>Permessi Minimali:</strong> L'app richiede solo i permessi minimi necessari</li>
+                    <li><strong>Comunicazioni Crittografate:</strong> Tutte le comunicazioni di rete sono completamente crittografate tramite HTTPS/TLS.</li>
+                    <li><strong>OAuth 2.0:</strong> Autenticazione conforme agli standard del settore; l'app non memorizza né gestisce la tua password Google.</li>
+                    <li><strong>Sandbox dell'App:</strong> L'ambiente di isolamento di Android impedisce ad altre app di accedere alle preferenze locali.</li>
                 </ul>
+
+                <h3>5.4 Conservazione dei Dati</h3>
+                <p>I dati del calendario e dell'account vengono elaborati in memoria durante la sessione attiva dell'app e vengono eliminati immediatamente dopo la chiusura dell'app o il completamento dell'importazione. Le preferenze locali rimangono memorizzate fino a quando non cancelli i dati dell'app o la disinstalli. Puoi cancellare questi dati in qualsiasi momento tramite Impostazioni Android &gt; App &gt; ICS Importer &gt; Archiviazione &gt; Cancella Dati. La conservazione dei dati di AdMob è regolata dalla Privacy Policy di Google.</p>
             </section>
 
             <section>
-                <h2>6. Conservazione e Cancellazione dei Dati</h2>
-
-                <h3>6.1 Dati Utente Google (Calendario e Account)</h3>
-                <p>ICS Importer <strong>non</strong> conserva alcun dato utente Google:</p>
-                <ul>
-                    <li>I <strong>dati del calendario</strong> (titoli degli eventi, date, descrizioni, partecipanti)
-                        vengono elaborati interamente in memoria durante la sessione attiva dell'app e non vengono
-                        <em>mai</em> salvati — né sui nostri server, né localmente sul dispositivo, né condivisi con
-                        terze parti.
-                    </li>
-                    <li>Le <strong>informazioni dell'account Google</strong> (indirizzo email, nome del profilo) vengono
-                        utilizzate solo durante l'autenticazione e non vengono memorizzate dall'app.</li>
-                    <li>L'<strong>elenco dei calendari</strong> (nomi e ID) viene recuperato dinamicamente ogni volta
-                        che è necessario e non viene mai salvato nella cache.</li>
-                </ul>
-                <p>Non appena chiudi l'app o completi un'importazione, tutti i dati utente Google vengono
-                    immediatamente eliminati dalla memoria.</p>
-
-                <h3>6.2 Preferenze Locali</h3>
-                <p>Gli unici dati conservati in modo persistente sul tuo dispositivo sono le preferenze utente
-                    (impostazione di importazione automatica e selezione del calendario predefinito). Questi dati
-                    vengono conservati fino a quando non li elimini manualmente o disinstalli l'app. Puoi cancellarli
-                    in qualsiasi momento tramite Impostazioni Android &gt; App &gt; ICS Importer &gt; Archiviazione
-                    &gt; Cancella Dati.</p>
-
-                <h3>6.3 Richiesta di Cancellazione dei Dati</h3>
-                <p>Poiché non memorizziamo alcun dato su server esterni, non c'è nulla da eliminare da parte nostra.
-                    Per rimuovere tutte le preferenze dell'app salvate localmente, utilizza l'opzione Cancella Dati
-                    descritta sopra. Per rimuovere gli eventi importati nel tuo Google Calendar, eliminali
-                    direttamente da Google Calendar.</p>
-            </section>
-
-            <section>
-                <h2>7. Permessi Richiesti</h2>
+                <h2>6. Permessi Richiesti</h2>
                 <p>L'app richiede i seguenti permessi:</p>
                 <ul>
-                    <li><strong>Accesso a Internet:</strong> Necessario per comunicare con le API di autenticazione e
-                        Calendar di Google e (in futuro) per caricare annunci pubblicitari</li>
-                    <li><strong>Post Notifiche (Android 13+):</strong> Utilizzato per avvisarti quando l'importazione
-                        automatica è completata. Puoi negare questo permesso; l'importazione automatica continuerà a
-                        funzionare, ma non verrà mostrata alcuna notifica</li>
+                    <li><strong>Accesso a Internet (<code>android.permission.INTERNET</code>):</strong> Necessario per comunicare con le API di Google Calendar, caricare gli annunci e verificare le scelte di consenso.</li>
+                    <li><strong>Invio Notifiche (<code>android.permission.POST_NOTIFICATIONS</code>):</strong> (Android 13+) Utilizzato per avvisarti del completamento dell'importazione automatica. Puoi negarlo; l'importazione automatica funzionerà comunque regolarmente.</li>
                 </ul>
             </section>
 
             <section>
-                <h2>8. I Tuoi Diritti e Controlli</h2>
+                <h2>7. I Tuoi Diritti e Controlli</h2>
                 <p>Hai il pieno controllo sui tuoi dati:</p>
                 <ul>
-                    <li><strong>Accedi/Esci:</strong> Puoi accedere o uscire dal tuo account Google in qualsiasi
-                        momento all'interno dell'app</li>
-                    <li><strong>Revoca Accesso:</strong> Puoi revocare l'accesso dell'app al tuo Google Calendar in
-                        qualsiasi momento tramite le impostazioni del tuo account Google</li>
-                    <li><strong>Elimina Dati dell'App:</strong> Puoi cancellare tutti i dati dell'app (incluse le
-                        preferenze) tramite Impostazioni Android > App > ICS Importer > Archiviazione > Cancella Dati
-                    </li>
-                    <li><strong>Elimina Eventi Importati:</strong> Puoi eliminare qualsiasi evento importato dall'app
-                        direttamente in Google Calendar</li>
-                    <li><strong>Disabilita Notifiche:</strong> Puoi disabilitare o controllare le notifiche dell'app
-                        nelle impostazioni del dispositivo</li>
+                    <li><strong>Disconnessione:</strong> Puoi uscire dal tuo account Google in qualsiasi momento all'interno dell'app.</li>
+                    <li><strong>Revoca Accesso:</strong> Puoi revocare l'accesso dell'app al tuo Google Calendar in qualsiasi momento nelle impostazioni di sicurezza del tuo account Google.</li>
+                    <li><strong>Eliminazione dei Dati dell'App:</strong> Puoi cancellare tutte le preferenze locali eliminando i dati dell'app nelle impostazioni Android o disinstallando l'app.</li>
+                    <li><strong>Scelte sul Consenso Pubblicitario:</strong> Puoi reimpostare il tuo ID pubblicitario o disattivare gli annunci personalizzati nelle impostazioni del tuo dispositivo Android. Per gli utenti dell'UE/SEE, puoi modificare o revocare le tue preferenze di consenso in qualsiasi momento tramite le impostazioni di consenso all'interno dell'app.</li>
                 </ul>
             </section>
 
             <section>
-                <h2>9. Privacy dei Bambini</h2>
-                <p>ICS Importer è progettato per un pubblico generale e non raccoglie consapevolmente informazioni
-                    personali da bambini di età inferiore ai 13 anni.</p>
-                <p>Se apprendiamo di aver raccolto informazioni personali da un bambino di età inferiore a 13 anni
-                    senza il consenso dei genitori, prenderemo provvedimenti per eliminare tali informazioni il più
-                    rapidamente possibile.</p>
+                <h2>8. Privacy dei Bambini</h2>
+                <p>ICS Importer è progettato per un pubblico generale e non raccoglie consapevolmente informazioni personali da bambini di età inferiore ai 13 anni. AdMob pubblica annunci in conformità con le norme di Google sulla classificazione dei contenuti e sui prodotti per famiglie.</p>
             </section>
 
             <section>
-                <h2>10. Utenti Internazionali e Conformità</h2>
+                <h2>9. Informazioni Aggiuntive per gli Utenti dell'Unione Europea (GDPR)</h2>
+                <p>Se risiedi nell'Unione Europea o nello Spazio Economico Europeo (SEE), si applicano le seguenti disposizioni ai sensi del Regolamento Generale sulla Protezione dei Dati (GDPR).</p>
 
-                <h3>9.1 GDPR (Unione Europea)</h3>
-                <p>Per gli utenti nell'UE/SEE, elaboriamo i tuoi dati sulla base di:</p>
+                <h3>9.1 Titolare del Trattamento</h3>
+                <p>Il Titolare del Trattamento dei dati è Alessandro Barbieri. Per qualsiasi domanda o richiesta relativa alla privacy, puoi contattare il Titolare all'indirizzo email: <a href="mailto:ale.ialex5@yahoo.it">ale.ialex5@yahoo.it</a>.</p>
+
+                <h3>9.2 Basi Giuridiche del Trattamento</h3>
+                <p>Trattiamo le informazioni in base alle seguenti basi giuridiche valide:</p>
                 <ul>
-                    <li><strong>Consenso dell'Utente:</strong> Per accedere al tuo Google Calendar</li>
-                    <li><strong>Interesse Legittimo:</strong> Per fornire le funzionalità dell'app</li>
+                    <li><strong>Esecuzione di un Contratto (Art. 6(1)(b) GDPR):</strong> Per autenticare il tuo account Google, recuperare l'elenco dei calendari e creare eventi nel tuo Google Calendar su tua richiesta. I dati del calendario sono elaborati esclusivamente in memoria durante l'uso attivo.</li>
+                    <li><strong>Consenso dell'Utente (Art. 6(1)(a) GDPR):</strong> Per visualizzare annunci pubblicitari personalizzati o non personalizzati tramite Google AdMob, raccolto all'avvio dell'app tramite la User Messaging Platform (UMP) di Google. Puoi revocare il consenso in qualsiasi momento.</li>
+                    <li><strong>Legittimo Interesse (Art. 6(1)(f) GDPR):</strong> Per garantire la sicurezza dell'app, prevenire frodi e gestire operazioni pubblicitarie di base (come il limite di frequenza).</li>
                 </ul>
-                <p>Hai il diritto di accedere, rettificare, cancellare e trasferire i tuoi dati, nonché di opporti al
-                    trattamento. Quando AdMob sarà implementato, sarà richiesto il consenso esplicito per gli annunci
-                    personalizzati.</p>
 
-                <h3>9.2 CCPA (California, USA)</h3>
-                <p>Per i residenti in California:</p>
+                <h3>9.3 Trasferimenti Internazionali di Dati</h3>
+                <p>Le informazioni elaborate da servizi di terze parti come Google AdMob possono essere trasferite e memorizzate in paesi al di fuori dello SEE, inclusi gli Stati Uniti. Google si affida alle Clausole Contrattuali Standard (SCC) approvate dalla Commissione Europea ed è certificata ai sensi dell'EU-US Data Privacy Framework per garantire un livello di protezione conforme. Allo stesso modo, i dati del tuo calendario sono trasmessi in modo sicuro direttamente alle infrastrutture server di Google.</p>
+
+                <h3>9.4 I Tuoi Diritti ai sensi del GDPR</h3>
+                <p>In qualità di interessato, disponi dei diritti di accesso (Art. 15), rettifica (Art. 16), cancellazione (Art. 17), limitazione (Art. 18), portabilità (Art. 20), opposizione (Art. 21) e del diritto di revocare il consenso (Art. 7(3)) in qualsiasi momento. Per esercitare questi diritti (laddove applicabili, considerando che i dati sono salvati solo localmente), puoi cancellare i dati dell'app, scollegare l'account da Google o contattare l'indirizzo email del Titolare.</p>
+
+                <h3>9.5 Diritto di proporre Reclamo</h3>
+                <p>Hai il diritto di proporre un reclamo a un'autorità di controllo. In Italy, l'autorità di riferimento è il <strong>Garante per la protezione dei dati personali</strong> (<a href="https://www.garanteprivacy.it" target="_blank">www.garanteprivacy.it</a>).</p>
+            </section>
+
+            <section>
+                <h2>10. Informazioni Aggiuntive per i Residenti in California (CCPA)</h2>
+                <p>Per i residenti in California, USA, ai sensi del California Consumer Privacy Act (CCPA):</p>
                 <ul>
-                    <li>Le informazioni personali raccolte includono email e dati del calendario</li>
-                    <li>Queste informazioni vengono utilizzate solo per le funzionalità del servizio</li>
-                    <li><strong>Non vendiamo le tue informazioni personali</strong></li>
-                    <li>Hai il diritto di accedere ed eliminare le tue informazioni personali</li>
+                    <li><strong>Non vendiamo le tue informazioni personali.</strong></li>
+                    <li>L'app accede alle informazioni dell'account e del calendario per scopi funzionali, elaborandoli in memoria. Le reti pubblicitarie di terze parti possono raccogliere identificatori del dispositivo e statistiche di utilizzo come descritto nella Sezione 2.5.</li>
+                    <li>Hai il diritto di accedere ed eliminare i tuoi dati locali (operazione eseguibile direttamente cancellando i dati dell'app o disinstallandola).</li>
                 </ul>
             </section>
 
             <section>
                 <h2>11. Modifiche a questa Informativa sulla Privacy</h2>
-                <p>Potremmo aggiornare questa Informativa sulla Privacy di tanto in tanto per riflettere modifiche
-                    nell'app o requisiti legali. Modifiche future degne di nota includono:</p>
-                <ul>
-                    <li>Integrazione della pubblicità Google AdMob</li>
-                    <li>Potenziale aggiunta di analisi o segnalazione di crash</li>
-                </ul>
-                <p>L'informativa aggiornata sarà sempre disponibile a questo stesso link. Ti consigliamo di
-                    controllarla periodicamente. La "Data di entrata in vigore" in alto indica quando l'informativa è
-                    stata aggiornata l'ultima volta.</p>
+                <p>Potremmo aggiornare questa Informativa sulla Privacy di tanto in tanto. L'informativa aggiornata sarà sempre disponibile a questo stesso link. La "Data di entrata in vigore" in alto indica quando l'informativa è stata aggiornata l'ultima volta.</p>
             </section>
 
             <section>
                 <h2>12. Contattaci</h2>
-                <p>Se hai domande o dubbi su questa Informativa sulla Privacy o sulle pratiche di gestione dei dati
-                    dell'app, contattaci:</p>
+                <p>Se hai domande o dubbi su questa Informativa sulla Privacy, contattaci a:</p>
                 <p>📧 <a href="mailto:ale.ialex5@yahoo.it">ale.ialex5@yahoo.it</a></p>
             </section>
 
