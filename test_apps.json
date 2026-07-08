@@ -27,7 +27,9 @@
         "description": {
             "en": "Track your trips, analyze driving statistics, and monitor your speed.",
             "it": "Registra i tuoi viaggi, visualizza statistiche e monitora guida e velocità."
-        }
+        },
+        "lastVersion": "1.1.0",
+        "forceUpdateVersion": "1.0.99"
     },
     {
         "id": "com.ialex5.icsImporter",
