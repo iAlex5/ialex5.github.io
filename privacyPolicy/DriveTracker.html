@@ -24,11 +24,11 @@
         <!-- English Content -->
         <div id="policy-en">
             <h1>🔒 Privacy Policy – DriveTracker</h1>
-            <p><strong>Effective Date: February 2, 2026</strong></p>
+            <p><strong>Effective Date: November 1, 2026</strong></p>
             <p>Thank you for using DriveTracker. Your privacy is very important to us, and we are committed to being transparent about how your information is handled.</p>
             
             <p><strong>In short:</strong><br>
-            DriveTracker operates as an offline-first app and stores location and trip data locally on your device. The app collects foreground and background location data to record your trips even when the screen is off or the app is closed. The app displays advertisements using Google AdMob, which collects device and usage information, and we use Google's User Messaging Platform (UMP) to obtain GDPR-compliant consent.</p>
+            DriveTracker operates as an offline-first app and stores location and trip data locally on your device. The app collects foreground and background location data to record your trips even when the screen is off or the app is closed. The app displays advertisements using Google AdMob, which collects device and usage information, and we use Google's User Messaging Platform (UMP) to obtain GDPR-compliant consent. We also use Google Firebase (Crashlytics and Analytics) for technical crash diagnostics and anonymous, aggregated telemetry to monitor application stability and performance without identifying individual users or transmitting location data.</p>
 
             <section>
                 <h2>1. What This App Does</h2>
@@ -43,7 +43,7 @@
 
             <section>
                 <h2>2. Information We Collect</h2>
-                <h3>2.1 Location Data (Foreground & Background)</h3>
+                <h3>2.1 Location Data (Foreground &amp; Background)</h3>
                 <p>To enable the recording of your car trips, calculate driving statistics, and draw your route on the map, DriveTracker collects location data. This collection occurs in the foreground while you use the app, and also in the background (when the app is closed or the screen is off), provided that you have actively started a recording session by pressing the "Start Tracking" button. Location coordinates are used locally with the Android Geocoder and via secure API requests with the LocationIQ API to translate your location into readable addresses (reverse geocoding) for your trip logs. We also use the TomTom API to retrieve routing and estimated travel time (ETA) statistics for your trips. Location data is stored locally in the application's private database and is never transmitted to any external servers owned by us.</p>
 
                 <h3>2.2 Activity Recognition</h3>
@@ -62,6 +62,31 @@
                     <li>Network information (carrier, connection type)</li>
                 </ul>
                 <p>For users in the European Union (EU) and European Economic Area (EEA), a GDPR-compliant consent management mechanism (Google UMP SDK) is presented before any data is used for personalized advertisements.</p>
+
+                <h3>2.5 Crash Reporting and Diagnostics (Google Firebase Crashlytics)</h3>
+                <p>To detect, diagnose, and resolve technical errors and ensure application stability, DriveTracker integrates Firebase Crashlytics. When a crash or fatal error occurs, the following diagnostic information is transmitted:</p>
+                <ul>
+                    <li>Crash logs and stack traces detailing the exact point of failure in the software code.</li>
+                    <li>Device state at the time of the crash (device manufacturer and model, operating system version, orientation, free RAM, and storage space).</li>
+                    <li>Technical Firebase Installation UUID (Crashlytics Installation UUID), a randomly generated identifier used solely to differentiate individual crashes without identifying the user or device owner.</li>
+                </ul>
+                <p>Firebase Crashlytics does not collect personally identifying information (such as your name, email, or IP address) or any location/trip history. Processing is based on our legitimate interest in maintaining software quality, reliability, and security.</p>
+
+                <h3>2.6 App Telemetry and Usage Metrics (Google Firebase Analytics)</h3>
+                <p>To understand aggregate feature usage patterns, measure general app performance, and improve the user experience, DriveTracker collects anonymous, aggregated metrics via Google Firebase Analytics under strict GDPR privacy controls:</p>
+                <ul>
+                    <li><strong>No User Identification:</strong> The user ID feature (<code>setUserId()</code>) is disabled. No persistent identifiers or personal user profiles are generated, maintained, or stored.</li>
+                    <li><strong>No Geolocation or Route Tracking:</strong> Precise GPS coordinates, physical addresses, and driving trajectories are strictly processed locally and are <em>never</em> sent to Firebase Analytics.</li>
+                    <li><strong>No Advertising ID or Ad Personalization:</strong> Collection of the Google Advertising ID (GAID) is disabled and never associated with analytics events.</li>
+                    <li><strong>Privacy-Preserving Data Bucketing:</strong> Custom events for completed actions (such as trip recordings) are transmitted exclusively using broad, anonymized intervals (buckets) rather than exact values:
+                        <ul>
+                            <li>Trip durations are grouped into 30-minute intervals (e.g., 0–30 min, 30–60 min).</li>
+                            <li>Trip distances are grouped into broad buckets of at least 20 km (e.g., 0–20 km, 20–40 km).</li>
+                            <li>Maximum speed is grouped into intervals of 20 km/h (e.g., 0–20 km/h, 20–40 km/h).</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p>Data is processed on the legal basis of performance of a contract and our legitimate interest in optimizing application usability, reliability, and stability, protected by full pseudonymization and data aggregation.</p>
             </section>
 
             <section>
@@ -72,6 +97,8 @@
                     <li><strong>Reverse Geocoding:</strong> To translate coordinates of trip start and end points into readable addresses using Android Geocoder and LocationIQ.</li>
                     <li><strong>Estimated Travel Time:</strong> To calculate ETA and routing statistics using the TomTom API.</li>
                     <li><strong>Bluetooth Auto-Start:</strong> To suggest starting a recording session when your device connects to your car's Bluetooth system.</li>
+                    <li><strong>Technical Diagnostics &amp; Bug Fixing:</strong> Firebase Crashlytics processes crash reports and device diagnostics to identify, debug, and fix software defects.</li>
+                    <li><strong>Aggregate Usage Analytics:</strong> Firebase Analytics processes anonymous, bucketed feature usage metrics to improve application usability, performance, and stability.</li>
                     <li><strong>Advertising:</strong> AdMob uses advertising identifiers to serve, limit, and personalize ads, subject to your choices and consent.</li>
                 </ul>
             </section>
@@ -88,13 +115,19 @@
                         <br><strong>Provider:</strong> Google LLC
                         <br><strong>Purpose:</strong> To facilitate high-accuracy location tracking
                     </li>
-                    <li><strong>LocationIQ API & Android Geocoder</strong>
+                    <li><strong>LocationIQ API &amp; Android Geocoder</strong>
                         <br><strong>Purpose:</strong> To translate GPS coordinates of your trip's start and end points into readable addresses
                         <br><strong>LocationIQ Privacy Policy:</strong> <a href="https://locationiq.com/privacy" target="_blank">https://locationiq.com/privacy</a>
                     </li>
                     <li><strong>TomTom API</strong>
                         <br><strong>Purpose:</strong> To calculate estimated travel time (ETA) and routing statistics for your trips
                         <br><strong>TomTom Privacy Policy:</strong> <a href="https://www.tomtom.com/privacy/" target="_blank">https://www.tomtom.com/privacy/</a>
+                    </li>
+                    <li><strong>Google Firebase (Crashlytics &amp; Analytics)</strong>
+                        <br><strong>Provider:</strong> Google LLC / Google Ireland Limited
+                        <br><strong>Purpose:</strong> Error diagnosis, crash reporting, application stability, and aggregated feature telemetry
+                        <br><strong>Firebase Privacy Policy:</strong> <a href="https://firebase.google.com/support/privacy" target="_blank">https://firebase.google.com/support/privacy</a>
+                        <br><strong>Google Privacy Policy:</strong> <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a>
                     </li>
                     <li><strong>Google AdMob (Advertising)</strong>
                         <br><strong>Provider:</strong> Google LLC / Google Ireland Limited
@@ -117,11 +150,11 @@
                 <h3>5.3 Security Measures</h3>
                 <ul>
                     <li><strong>App Sandbox:</strong> Android's isolation architecture protects your local database from external access.</li>
-                    <li><strong>Encrypted Connections:</strong> Network communication for map tiles, geocoding APIs, TomTom API, and ads is fully encrypted via HTTPS/TLS.</li>
+                    <li><strong>Encrypted Connections:</strong> Network communication for map tiles, geocoding APIs, TomTom API, crash diagnostics (Crashlytics), telemetry (Analytics), and ads is fully encrypted in transit via HTTPS/TLS.</li>
                 </ul>
 
                 <h3>5.4 Data Retention</h3>
-                <p>All local trip records are stored persistently on your device until you choose to delete them, clear the app data, or uninstall the app. You can delete all logs at any time via Android Settings &gt; Apps &gt; DriveTracker &gt; Storage &gt; Clear Data. AdMob data retention is governed by Google's Privacy Policy.</p>
+                <p>All local trip records are stored persistently on your device until you choose to delete them, clear the app data, or uninstall the app. You can delete all logs at any time via Android Settings &gt; Apps &gt; DriveTracker &gt; Storage &gt; Clear Data. AdMob data retention is governed by Google's Privacy Policy. Firebase Crashlytics retains crash logs for up to 90 days before deletion, and Firebase Analytics metrics are aggregated and retained according to standard Google Firebase policies.</p>
             </section>
 
             <section>
@@ -134,7 +167,7 @@
                     <li><strong>Bluetooth Permissions (<code>BLUETOOTH</code>, <code>BLUETOOTH_ADMIN</code>, <code>BLUETOOTH_CONNECT</code>, <code>BLUETOOTH_SCAN</code>):</strong> Required to detect Bluetooth connections to your car's hands-free system to suggest starting a trip tracking session.</li>
                     <li><strong>Foreground Service (<code>FOREGROUND_SERVICE</code>, <code>FOREGROUND_SERVICE_LOCATION</code>):</strong> Required to keep location tracking active in the background while you navigate away or turn off the screen.</li>
                     <li><strong>Post Notifications (<code>POST_NOTIFICATIONS</code>):</strong> Required to display a persistent notification with tracking controls during an active recording session.</li>
-                    <li><strong>Internet Access (<code>android.permission.INTERNET</code>):</strong> Required to load map tiles, communicate with geocoding/TomTom APIs, display advertisements, and check consent choices.</li>
+                    <li><strong>Internet Access (<code>android.permission.INTERNET</code>):</strong> Required to load map tiles, communicate with geocoding/TomTom APIs, transmit crash reports (Crashlytics) and anonymous telemetry (Firebase Analytics), display advertisements, and check consent choices.</li>
                 </ul>
             </section>
 
@@ -163,13 +196,13 @@
                 <h3>9.2 Legal Bases for Processing</h3>
                 <p>We process information under the following valid legal bases:</p>
                 <ul>
-                    <li><strong>Performance of a Contract (Art. 6(1)(b) GDPR):</strong> To provide the core functionalities of the app requested by you (recording your car trips, calculating driving stats, mapping routes, reverse geocoding addresses via LocationIQ, and computing ETAs via TomTom). All location history is processed and stored locally on your device.</li>
+                    <li><strong>Performance of a Contract (Art. 6(1)(b) GDPR):</strong> To provide the core functionalities of the app requested by you (recording your car trips, calculating driving stats, mapping routes, reverse geocoding addresses via LocationIQ, and computing ETAs via TomTom). All location history is processed and stored locally on your device. It also encompasses aggregated feature usage telemetry necessary for the delivery and maintenance of requested application services.</li>
                     <li><strong>User Consent (Art. 6(1)(a) GDPR):</strong> To display personalized or non-personalized advertisements via Google AdMob, gathered through the Google User Messaging Platform (UMP) SDK. You can withdraw your consent at any time.</li>
-                    <li><strong>Legitimate Interest (Art. 6(1)(f) GDPR):</strong> For maintaining app security, preventing fraud, and conducting basic ad operations (such as frequency capping).</li>
+                    <li><strong>Legitimate Interest (Art. 6(1)(f) GDPR):</strong> For maintaining application stability, diagnosing crashes, and fixing software errors via Firebase Crashlytics; analyzing aggregate, bucketed, and anonymous usage trends via Firebase Analytics (without user ID tracking, without geolocation, and without ad profiling); preventing fraud; and conducting basic ad operations (such as frequency capping).</li>
                 </ul>
 
                 <h3>9.3 International Data Transfers</h3>
-                <p>Information processed by third-party services like Google AdMob, LocationIQ, or TomTom may be transferred to, and stored in, countries outside the EEA, including the United States. These providers rely on Standard Contractual Clauses (SCCs) approved by the European Commission and/or active certifications under the EU-US Data Privacy Framework to guarantee a compliant level of data protection.</p>
+                <p>Information processed by third-party services like Google AdMob, Google Firebase (Crashlytics &amp; Analytics), LocationIQ, or TomTom may be transferred to, and stored in, countries outside the EEA, including the United States. These providers rely on Standard Contractual Clauses (SCCs) approved by the European Commission and/or active certifications under the EU-US Data Privacy Framework to guarantee a compliant level of data protection.</p>
 
                 <h3>9.4 Your Rights Under GDPR</h3>
                 <p>As a data subject, you have the right of access (Art. 15), rectification (Art. 16), erasure (Art. 17), restriction of processing (Art. 18), data portability (Art. 20), objection (Art. 21), and the right to withdraw consent (Art. 7(3)) at any time. To exercise these rights (where applicable, though your data is stored only locally), you can clear your app data or contact the Data Controller's email.</p>
@@ -205,11 +238,11 @@
         <!-- Italian Content -->
         <div id="policy-it" style="display: none;">
             <h1>🔒 Informativa sulla Privacy – DriveTracker</h1>
-            <p><strong>Data di entrata in vigore: 2 Febbraio 2026</strong></p>
+            <p><strong>Data di entrata in vigore: 1 Novembre 2026</strong></p>
             <p>Grazie per aver scelto DriveTracker. La tua privacy è molto importante per noi e ci impegniamo ad essere trasparenti su come vengono gestite le tue informazioni.</p>
             
             <p><strong>In breve:</strong><br>
-            DriveTracker funziona come un'applicazione offline-first e memorizza i dati sulla posizione e sui viaggi localmente sul tuo dispositivo. L'app raccoglie i dati sulla posizione in primo piano e in background per registrare i tuoi viaggi anche quando lo schermo è spento o l'app è chiusa. L'app mostra annunci pubblicitari tramite Google AdMob, che raccoglie informazioni sul dispositivo e sull'utilizzo, e utilizziamo la User Messaging Platform (UMP) di Google per raccogliere il consenso conforme al GDPR.</p>
+            DriveTracker funziona come un'applicazione offline-first e memorizza i dati sulla posizione e sui viaggi localmente sul tuo dispositivo. L'app raccoglie i dati sulla posizione in primo piano e in background per registrare i tuoi viaggi anche quando lo schermo è spento o l'app è chiusa. L'app mostra annunci pubblicitari tramite Google AdMob, che raccoglie informazioni sul dispositivo e sull'utilizzo, e utilizziamo la User Messaging Platform (UMP) di Google per raccogliere il consenso conforme al GDPR. Utilizziamo inoltre Google Firebase (Crashlytics e Analytics) per la diagnosi tecnica dei crash e per raccogliere metriche di telemetria aggregate e anonime per monitorare stabilità e prestazioni, senza tracciare i singoli utenti e senza inviare dati di geolocalizzazione.</p>
 
             <section>
                 <h2>1. Cosa Fa Questa App</h2>
@@ -224,7 +257,7 @@
 
             <section>
                 <h2>2. Informazioni che Raccogliamo</h2>
-                <h3>2.1 Danti sulla Posizione (In primo piano e in Background)</h3>
+                <h3>2.1 Dati sulla Posizione (In primo piano e in Background)</h3>
                 <p>Per consentire la registrazione dei tuoi viaggi in auto, calcolare le statistiche di guida e tracciare il tuo percorso sulla mappa, DriveTracker raccoglie dati sulla posizione. Questa raccolta avviene in primo piano mentre usi l'app, e anche in background (quando l'app è chiusa o lo schermo è spento), a condizione che tu abbia avviato attivamente una sessione di registrazione premendo il pulsante "Inizia Tracciamento". Le coordinate di posizione vengono utilizzate localmente con il Geocoder di Android e tramite richieste API sicure con l'API di LocationIQ per tradurre la tua posizione in indirizzi leggibili (reverse geocoding) per i tuoi registri di viaggio. Utilizziamo anche l'API di TomTom per recuperare statistiche sul percorso e sul tempo stimato di percorrenza (ETA) per i tuoi viaggi. I dati sulla posizione sono memorizzati localmente nel database privato dell'applicazione e non vengono mai trasmessi a server esterni di nostra proprietà.</p>
 
                 <h3>2.2 Riconoscimento dell'Attività</h3>
@@ -243,6 +276,31 @@
                     <li>Informazioni sulla rete (operatore telefonico, tipo di connessione)</li>
                 </ul>
                 <p>Per gli utenti dell'Unione Europea (UE) e dello Spazio Economico Europeo (SEE), viene presentato un meccanismo di gestione del consenso conforme al GDPR (Google UMP SDK) prima che i dati vengano utilizzati per annunci personalizzati.</p>
+
+                <h3>2.5 Segnalazione Crash e Diagnostica (Google Firebase Crashlytics)</h3>
+                <p>Per rilevare, diagnosticare e risolvere errori tecnici e garantire la stabilità e la sicurezza dell'applicazione, DriveTracker integra Firebase Crashlytics. In caso di arresto anomalo o errore critico, vengono raccolte e trasmesse le seguenti informazioni tecniche:</p>
+                <ul>
+                    <li>Log di crash e stack trace relativi all'errore, che consentono di identificare con precisione la riga di codice e il componente interessato dal problema.</li>
+                    <li>Stato tecnico del dispositivo al momento del crash (produttore, modello, versione del sistema operativo, orientamento dello schermo, memoria RAM disponibile e spazio di archiviazione).</li>
+                    <li>UUID tecnico di installazione Firebase (Crashlytics Installation UUID), generato in modo casuale per distinguere le singole occorrenze di crash senza identificare l'utente o il dispositivo.</li>
+                </ul>
+                <p>Firebase Crashlytics non raccoglie dati personali identificativi (quali nome, cognome, indirizzo email o IP) né coordinate GPS o percorsi dei viaggi. La base giuridica del trattamento è il legittimo interesse a garantire l'affidabilità, la sicurezza e il funzionamento dell'applicazione.</p>
+
+                <h3>2.6 Metriche di Utilizzo e Telemetria (Google Firebase Analytics)</h3>
+                <p>Per comprendere l'uso generale delle funzionalità dell'applicazione e ottimizzare l'esperienza d'uso, DriveTracker raccoglie metriche in modalità anonima e aggregata tramite Google Firebase Analytics, nel rispetto delle norme GDPR:</p>
+                <ul>
+                    <li><strong>Nessun Tracciamento dell'Utente:</strong> L'identificatore utente (<code>setUserId()</code>) è disabilitato. Nessun identificatore personale, persistente o profilo individuale viene generato o memorizzato.</li>
+                    <li><strong>Nessuna Geolocalizzazione o Profilazione Spostamenti:</strong> Coordinate GPS precise, indirizzi e percorsi di viaggio sono elaborati unicamente in locale sul dispositivo e <em>non vengono mai inviati</em> a Firebase Analytics.</li>
+                    <li><strong>Disattivazione Personalizzazione Annunci:</strong> La raccolta del Google Advertising ID (GAID) è disattivata e non viene associata agli eventi analitici.</li>
+                    <li><strong>Metodi di Anonimizzazione dei Dati d'Uso (Bucketing):</strong> Gli eventi personalizzati relativi al completamento di azioni (ad esempio viaggi conclusi) vengono trasmessi esclusivamente tramite intervalli ampi e anonimizzati (bucket):
+                        <ul>
+                            <li>Durata del viaggio per fasce ampie di 30 minuti (es. 0–30 min, 30–60 min).</li>
+                            <li>Distanza percorsa per fasce ampie di almeno 20 km (es. 0–20 km, 20–40 km).</li>
+                            <li>Velocità massima per fasce ampie a step di 20 km/h (es. 0–20 km/h, 20–40 km/h).</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p>La base giuridica del trattamento è l'esecuzione del contratto e il legittimo interesse volto al miglioramento continuo e alla stabilità del servizio, in virtù della pseudonimizzazione completa e dell'assenza di profilazione individualizzata o pubblicitaria.</p>
             </section>
 
             <section>
@@ -253,6 +311,8 @@
                     <li><strong>Geocodifica Inversa:</strong> Per tradurre le coordinate dei punti di partenza e di arrivo dei viaggi in indirizzi leggibili utilizzando il Geocoder di Android e l'API di LocationIQ.</li>
                     <li><strong>Tempo di Percorrenza Stimato:</strong> Per calcolare l'ETA e le statistiche sul percorso utilizzando l'API di TomTom.</li>
                     <li><strong>Avvio Automatico Bluetooth:</strong> Per suggerire l'avvio di una sessione di registrazione quando il tuo dispositivo si connette al Bluetooth della tua auto.</li>
+                    <li><strong>Diagnosi Tecnica e Risoluzione Errori:</strong> Firebase Crashlytics elabora i log di errore e la diagnostica del dispositivo per individuare, analizzare e correggere bug e arresti anomali.</li>
+                    <li><strong>Metriche e Analisi Aggregate:</strong> Firebase Analytics elabora dati statistici anonimi e a fasce (bucket) sull'uso delle funzioni per ottimizzare le prestazioni e l'usabilità.</li>
                     <li><strong>Pubblicità:</strong> AdMob utilizza gli identificatori pubblicitari per pubblicare, limitare e personalizzare gli annunci, in conformità con le tue scelte e il tuo consenso.</li>
                 </ul>
             </section>
@@ -277,6 +337,12 @@
                         <br><strong>Scopo:</strong> Calcolare il tempo stimato di percorrenza (ETA) e le statistiche sul percorso per i tuoi viaggi
                         <br><strong>Informativa sulla Privacy di TomTom:</strong> <a href="https://www.tomtom.com/privacy/" target="_blank">https://www.tomtom.com/privacy/</a>
                     </li>
+                    <li><strong>Google Firebase (Crashlytics e Analytics)</strong>
+                        <br><strong>Fornitore:</strong> Google LLC / Google Ireland Limited
+                        <br><strong>Scopo:</strong> Diagnosi degli errori tecnici, stabilità dell'applicazione e raccolta di metriche di utilizzo anonime e aggregate
+                        <br><strong>Informativa sulla Privacy di Firebase:</strong> <a href="https://firebase.google.com/support/privacy" target="_blank">https://firebase.google.com/support/privacy</a>
+                        <br><strong>Informativa sulla Privacy di Google:</strong> <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a>
+                    </li>
                     <li><strong>Google AdMob (Pubblicità)</strong>
                         <br><strong>Fornitore:</strong> Google LLC / Google Ireland Limited
                         <br><strong>Scopo:</strong> Visualizzazione di annunci pubblicitari in-app
@@ -298,11 +364,11 @@
                 <h3>5.3 Misure di Sicurezza</h3>
                 <ul>
                     <li><strong>Sandbox dell'App:</strong> L'architettura di isolamento di Android protegge il tuo database locale da accessi esterni.</li>
-                    <li><strong>Connessioni Crittografate:</strong> Tutte le comunicazioni di rete per le mappe, le API di geocodifica, l'API di TomTom e gli annunci sono completamente crittografate tramite HTTPS/TLS.</li>
+                    <li><strong>Connessioni Crittografate:</strong> Tutte le comunicazioni di rete per le mappe, le API di geocodifica, l'API di TomTom, i report di arresto anomalo (Crashlytics), la telemetria (Analytics) e gli annunci sono completamente crittografate in transito tramite HTTPS/TLS.</li>
                 </ul>
 
                 <h3>5.4 Conservazione dei Dati</h3>
-                <p>Tutti i record locali dei viaggi sono memorizzati in modo persistente sul tuo dispositivo fino a quando non scegli di eliminarli, cancelli i dati dell'app o la disinstalli. Puoi eliminare tutti i registri in qualsiasi momento tramite Impostazioni Android &gt; App &gt; DriveTracker &gt; Archiviazione &gt; Cancella Dati. La conservazione dei dati di AdMob è regolata dalla Privacy Policy di Google.</p>
+                <p>Tutti i record locali dei viaggi sono memorizzati in modo persistente sul tuo dispositivo fino a quando non scegli di eliminarli, cancelli i dati dell'app o la disinstalli. Puoi eliminare tutti i registri in qualsiasi momento tramite Impostazioni Android &gt; App &gt; DriveTracker &gt; Archiviazione &gt; Cancella Dati. La conservazione dei dati di AdMob è regolata dalla Privacy Policy di Google. I log di crash di Firebase Crashlytics vengono conservati per un massimo di 90 giorni prima della cancellazione automatica, mentre le metriche aggregate di Firebase Analytics sono conservate secondo i termini standard di Google Firebase.</p>
             </section>
 
             <section>
@@ -315,7 +381,7 @@
                     <li><strong>Permessi Bluetooth (<code>BLUETOOTH</code>, <code>BLUETOOTH_ADMIN</code>, <code>BLUETOOTH_CONNECT</code>, <code>BLUETOOTH_SCAN</code>):</strong> Richiesti per rilevare le connessioni Bluetooth con il sistema vivavoce della tua auto per suggerire l'avvio del tracciamento del viaggio.</li>
                     <li><strong>Servizio in Primo Piano (<code>FOREGROUND_SERVICE</code>, <code>FOREGROUND_SERVICE_LOCATION</code>):</strong> Richiesto per mantenere attivo il tracciamento della posizione in background mentre esci dall'app o spegni lo schermo.</li>
                     <li><strong>Invio Notifiche (<code>POST_NOTIFICATIONS</code>):</strong> Richiesto per mostrare una notifica persistente con i controlli di tracciamento durante una sessione di registrazione attiva.</li>
-                    <li><strong>Accesso a Internet (<code>android.permission.INTERNET</code>):</strong> Necessario per caricare le mappe, comunicare con le API di geocodifica e TomTom, mostrare gli annunci pubblicitari e verificare le scelte di consenso.</li>
+                    <li><strong>Accesso a Internet (<code>android.permission.INTERNET</code>):</strong> Necessario per caricare le mappe, comunicare con le API di geocodifica e TomTom, trasmettere log di errore (Crashlytics) e telemetria anonima (Analytics), mostrare gli annunci pubblicitari e verificare le scelte di consenso.</li>
                 </ul>
             </section>
 
@@ -331,7 +397,7 @@
 
             <section>
                 <h2>8. Privacy dei Bambini</h2>
-                <p>DriveTracker is designed for general audiences and does not knowingly collect personal information from children under the age of 13. AdMob serves ads in accordance with Google's family and content rating policies.</p>
+                <p>DriveTracker è destinata a un pubblico generale e non raccoglie consapevolmente informazioni personali da minori di 13 anni. AdMob serve annunci in conformità con le norme di Google relative alla famiglia e ai contenuti.</p>
             </section>
 
             <section>
@@ -344,13 +410,13 @@
                 <h3>9.2 Basi Giuridiche del Trattamento</h3>
                 <p>Trattiamo le informazioni in base alle seguenti basi giuridiche valide:</p>
                 <ul>
-                    <li><strong>Esecuzione di un Contratto (Art. 6(1)(b) GDPR):</strong> Per fornire le funzionalità principali richieste (registrazione dei viaggi, calcolo delle statistiche di guida, disegno dei percorsi, geocodifica inversa degli indirizzi tramite LocationIQ e calcolo dell'ETA tramite TomTom). Tutta la cronologia delle posizioni è elaborata e memorizzata localmente sul tuo dispositivo.</li>
+                    <li><strong>Esecuzione di un Contratto (Art. 6(1)(b) GDPR):</strong> Per fornire le funzionalità principali richieste (registrazione dei viaggi, calcolo delle statistiche di guida, disegno dei percorsi, geocodifica inversa degli indirizzi tramite LocationIQ e calcolo dell'ETA tramite TomTom). Tutta la cronologia delle posizioni è elaborata e memorizzata localmente sul tuo dispositivo. Comprende inoltre le metriche essenziali di funzionalità e usabilità del servizio.</li>
                     <li><strong>Consenso dell'Utente (Art. 6(1)(a) GDPR):</strong> Per visualizzare annunci pubblicitari personalizzati o non personalizzati tramite Google AdMob, raccolto all'avvio dell'app tramite la User Messaging Platform (UMP) di Google. Puoi revocare il consenso in qualsiasi momento.</li>
-                    <li><strong>Legittimo Interesse (Art. 6(1)(f) GDPR):</strong> Per garantire la sicurezza dell'app, prevenire frodi e gestire operazioni pubblicitarie di base (come il limite di frequenza).</li>
+                    <li><strong>Legittimo Interesse (Art. 6(1)(f) GDPR):</strong> Per garantire la sicurezza, l'integrità e la stabilità dell'applicazione tramite Firebase Crashlytics (diagnosi tecnica e risoluzione tempestiva di crash e bug); analizzare trend di utilizzo anonimi e aggregati tramite Firebase Analytics (senza identificatori utente persistenti, senza tracciamento di posizione o spostamenti e con aggregazione in intervalli/bucket); prevenire frodi; e gestire operazioni pubblicitarie di base (come il limite di frequenza).</li>
                 </ul>
 
                 <h3>9.3 Trasferimenti Internazionali di Dati</h3>
-                <p>Le informazioni elaborate da servizi di terze parti come Google AdMob, LocationIQ o TomTom possono essere trasferite e memorizzate in paesi al di fuori dello SEE, inclusi gli Stati Uniti. Questi fornitori si affidano alle Clausole Contrattuali Standard (SCC) approvate dalla Commissione Europea e/o a certificazioni attive ai sensi dell'EU-US Data Privacy Framework per garantire un livello di protezione conforme.</p>
+                <p>Le informazioni elaborate da servizi di terze parti come Google AdMob, Google Firebase (Crashlytics e Analytics), LocationIQ o TomTom possono essere trasferite e memorizzate in paesi al di fuori dello SEE, inclusi gli Stati Uniti. Questi fornitori si affidano alle Clausole Contrattuali Standard (SCC) approvate dalla Commissione Europea e/o a certificazioni attive ai sensi dell'EU-US Data Privacy Framework per garantire un livello di protezione conforme.</p>
 
                 <h3>9.4 I Tuoi Diritti ai sensi del GDPR</h3>
                 <p>In qualità di interessato, disponi dei diritti di accesso (Art. 15), rettifica (Art. 16), cancellazione (Art. 17), limitazione (Art. 18), portabilità (Art. 20), opposizione (Art. 21) e del diritto di revocare il consenso (Art. 7(3)) in qualsiasi momento. Per esercitare questi diritti (laddove applicabili, considerando che i dati sono salvati solo localmente), puoi cancellare i dati dell'app o contattare l'indirizzo email del Titolare.</p>
